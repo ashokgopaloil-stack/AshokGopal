@@ -1,43 +1,47 @@
 ---
-import { NAV_ITEMS, SITE } from "../data/site";
+import { SITE, whatsappLink } from "../data/site";
 ---
 <footer class="site-footer">
   <div class="footer-grid">
-    <section>
-      <img src={SITE.logo} alt="" width="48" height="48" />
-      <h2>Ashok Gopal</h2>
-      <p>Kacchi ghani mustard oil for Bengali kitchens, retailers, restaurants, and wholesale distribution.</p>
-    </section>
-
-    <section>
-      <h3>Explore</h3>
-      <ul>
-        {NAV_ITEMS.map((item) => (
-          <li><a href={item.href}>{item.label}</a></li>
-        ))}
-      </ul>
-    </section>
-
-    <section>
-      <h3>Sales</h3>
-      <ul>
-        <li><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>
-        <li><a href={`https://wa.me/${SITE.whatsapp}`}>WhatsApp sales</a></li>
-        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Social</h3>
-      <ul>
-        <li><a href={SITE.instagram}>Instagram</a></li>
-        <li><a href={SITE.facebook}>Facebook</a></li>
-      </ul>
-    </section>
+    <div>
+      <a class="brand footer-brand" href="/">
+        <img src="/logo.svg" alt="Ashok Gopal logo" />
+        <span>
+          <strong>{SITE.name}</strong>
+          <small>{SITE.tagline}</small>
+        </span>
+      </a>
+      <p>Manufacturing-first website for product trust, retail discovery, and wholesale partner acquisition across West Bengal.</p>
+      <div class="social-links">
+        <a href={SITE.social.instagram} rel="me noopener" target="_blank">Instagram</a>
+        <a href={SITE.social.facebook} rel="me noopener" target="_blank">Facebook</a>
+      </div>
+    </div>
+    <div>
+      <h3>Products</h3>
+      <a href="/products/kacchi-ghani-mustard-oil-1l/">1 Litre Bottle</a>
+      <a href="/products/kacchi-ghani-mustard-oil-5l-jar/">5 Litre Jar</a>
+      <a href="/products/kacchi-ghani-mustard-oil-15kg-tin/">15 kg Tin</a>
+      <a href="/products/kacchi-ghani-mustard-oil-retail-carton/">Retail Carton Supply</a>
+    </div>
+    <div>
+      <h3>Trade</h3>
+      <a href="/wholesale/">Wholesale enquiry</a>
+      <a href="/wholesale/distributor/">Distributor partnership</a>
+      <a href="/wholesale/super-stockist/">Super stockist</a>
+      <a href="/where-to-buy/">Where to buy</a>
+    </div>
+    <div>
+      <h3>Trust</h3>
+      <a href="/manufacturing/">Manufacturing</a>
+      <a href="/quality/">Quality</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </div>
   </div>
-
   <div class="footer-bottom">
-    <p>© {new Date().getFullYear()} Ashok Gopal. All rights reserved.</p>
-    <p>Replace placeholder product and factory images before public launch.</p>
+    <span>{SITE.address.street}, {SITE.address.locality}, {SITE.address.region} {SITE.address.postalCode}</span>
+    <a href={whatsappLink("I want to talk to Ashok Gopal sales.")}>{SITE.phone}</a>
+    <a href="/privacy/">Privacy</a>
   </div>
 </footer>

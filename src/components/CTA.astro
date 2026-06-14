@@ -1,23 +1,29 @@
 ---
 interface Props {
-  title: string;
-  text: string;
-  primaryHref: string;
-  primaryLabel: string;
+  title?: string;
+  text?: string;
+  href?: string;
+  label?: string;
   secondaryHref?: string;
   secondaryLabel?: string;
 }
-
-const { title, text, primaryHref, primaryLabel, secondaryHref, secondaryLabel } = Astro.props;
+const {
+  title = "Ready to talk trade, retail, or product supply?",
+  text = "Share your location, business type, and expected monthly requirement. The website is structured to route serious enquiries to the right conversation quickly.",
+  href = "/wholesale/",
+  label = "Start wholesale enquiry",
+  secondaryHref = "/products/",
+  secondaryLabel = "View products"
+} = Astro.props;
 ---
 <section class="cta-panel">
   <div>
-    <p class="eyebrow">Sales and distribution</p>
+    <p class="eyebrow">Next step</p>
     <h2>{title}</h2>
     <p>{text}</p>
   </div>
   <div class="cta-actions">
-    <a class="button primary" href={primaryHref}>{primaryLabel}</a>
-    {secondaryHref && secondaryLabel && <a class="button secondary" href={secondaryHref}>{secondaryLabel}</a>}
+    <a class="button" href={href}>{label}</a>
+    {secondaryHref && <a class="button secondary" href={secondaryHref}>{secondaryLabel}</a>}
   </div>
 </section>

@@ -10,13 +10,13 @@ const data = {
   alternateName: ["Ashok Gopal", "Gopal Mustard Oil", "Gopal Kacchi Ghani"],
   url: SITE.url,
   logo: new URL(SITE.logo, SITE.url).toString(),
-  sameAs: [SITE.facebook, SITE.instagram],
+  sameAs: [SITE.social.instagram, SITE.social.facebook],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: SITE.phone,
     contactType: "sales",
     areaServed: "IN",
-    availableLanguage: SITE.languages
+    availableLanguage: ["English", "Bengali", "Hindi"]
   }
 };
 ---

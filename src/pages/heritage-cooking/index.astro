@@ -1,74 +1,26 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
-import { SITE } from "../../data/site";
-
-const articles = [
-  {
-    title: "Shorshe fish and the role of mustard oil aroma",
-    text: "A future recipe page for fish curry, mustard paste, and the sharp mustard-oil profile used in Bengali cooking.",
-    image: "/placeholders/recipe-fish.svg"
-  },
-  {
-    title: "Begun bhaja with kacchi ghani mustard oil",
-    text: "A cooking-use landing page for fried brinjal, lunch plates, and everyday home-cooking search intent.",
-    image: "/placeholders/recipe-begun.svg"
-  },
-  {
-    title: "Pickles, marinades, and mustard oil preservation",
-    text: "A content slot for achar, marinades, traditional kitchen use, and regional recipe traffic.",
-    image: "/placeholders/recipe-pickle.svg"
-  }
-];
+import CTA from "../../components/CTA.astro";
+import { recipes } from "../../data/recipes";
 ---
-<BaseLayout
-  title="Heritage Bengali Cooking with Mustard Oil"
-  description="Regional recipe and cooking content for Bengali kitchens using Ashok Gopal kacchi ghani mustard oil."
->
-  <Fragment slot="head">
-    <BreadcrumbSchema items={[
-      { name: "Home", href: "/" },
-      { name: "Heritage Cooking", href: "/heritage-cooking/" }
-    ]} />
-  </Fragment>
+<BaseLayout title="Bengali Cooking with Mustard Oil" description="Recipe and heritage-cooking hub for mustard oil, Bengali kitchens, fish curry, begun bhaja, pickle, panch phoron, and social content landing pages.">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Heritage Cooking", href: "/heritage-cooking/" }]} />
+  <PageHero eyebrow="Recipe SEO hub" title="Turn Bengali cooking memory into search traffic and brand trust." description="Every recipe page should eventually get real photos, tested quantities, and a matching Instagram/Facebook post. This is the bridge between social proof and permanent organic traffic." image="/placeholders/social-recipe.svg" primaryHref="/products/kacchi-ghani-mustard-oil-1l/" primaryLabel="View 1 litre bottle" secondaryHref="/social/" secondaryLabel="Social content plan" />
 
-  <nav class="breadcrumb"><a href="/">Home</a> / Heritage Cooking</nav>
-
-  <section class="page-hero">
-    <p class="eyebrow">Heritage cooking</p>
-    <h1>Capture regional recipe searches.</h1>
-    <p>
-      Use this section for Bengali cooking content, Instagram reel landing pages, and local keywords like
-      khanti shorsher tel, jhajh, aroma, fish curry, bhaja, achar, and home-style cooking.
-    </p>
+  <section class="grid three section">
+    {recipes.map((recipe) => (
+      <a class="card product-card" href={`/heritage-cooking/recipes/${recipe.slug}/`}>
+        <img src={recipe.image} alt={`${recipe.title} placeholder`} loading="lazy" />
+        <div class="card-body">
+          <p class="eyebrow">{recipe.category}</p>
+          <h3>{recipe.title}</h3>
+          <p>{recipe.summary}</p>
+        </div>
+      </a>
+    ))}
   </section>
 
-  <section class="section">
-    <div class="grid three">
-      {articles.map((article) => (
-        <article class="article-card">
-          <img src={article.image} alt={`${article.title} image placeholder`} />
-          <h3>{article.title}</h3>
-          <p>{article.text}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="panel accent">
-      <p class="eyebrow">Social workflow</p>
-      <h2>How to use Instagram and Facebook content</h2>
-      <ul class="check-list">
-        <li>Post a reel on Instagram or Facebook.</li>
-        <li>Create a matching recipe page here with transcript, ingredients, cooking notes, and product CTA.</li>
-        <li>Link the social post back to the page where possible.</li>
-        <li>Add the finished dish photo and product pack photo together.</li>
-      </ul>
-      <div class="hero-actions">
-        <a class="button primary" href={SITE.instagram}>Open Instagram</a>
-        <a class="button secondary" href={SITE.facebook}>Open Facebook</a>
-      </div>
-    </div>
-  </section>
+  <CTA title="Use recipes as a sales asset." text="A distributor can share recipe pages with retailers, and the brand can share product pages under recipe posts. That creates a loop between social, SEO, and trade trust." href="/products/" label="Open catalog" />
 </BaseLayout>

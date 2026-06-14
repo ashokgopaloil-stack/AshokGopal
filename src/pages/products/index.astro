@@ -1,40 +1,23 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import SectionHeader from "../../components/SectionHeader.astro";
+import PageHero from "../../components/PageHero.astro";
 import ProductCard from "../../components/ProductCard.astro";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
 import { products } from "../../data/products";
 ---
-<BaseLayout
-  title="Mustard Oil Product Catalog"
-  description="Explore Ashok Gopal kacchi ghani mustard oil packs for homes, retailers, restaurants, distributors, and institutional buyers."
->
-  <Fragment slot="head">
-    <BreadcrumbSchema items={[
-      { name: "Home", href: "/" },
-      { name: "Products", href: "/products/" }
-    ]} />
-  </Fragment>
-
-  <nav class="breadcrumb"><a href="/">Home</a> / Products</nav>
-
-  <section class="page-hero">
-    <p class="eyebrow">Product catalog</p>
-    <h1>Clean product pages for every pack size.</h1>
-    <p>
-      Each Ashok Gopal SKU gets a crawlable URL, product schema, packaging placeholder, and wholesale CTA.
-      Add final product photography and price data before launch.
-    </p>
-  </section>
+<BaseLayout title="Mustard Oil Products" description="Ashok Gopal kacchi ghani mustard oil product catalog with bottle, jar, tin, retail carton, household, restaurant, and wholesale pack-size pages.">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }]} />
+  <PageHero eyebrow="Product catalog" title="Mustard oil product pages for every buyer intent." description="Each SKU page is built for a different conversion path: household purchase, retail shelf, restaurant bulk use, institutional procurement, or distributor carton supply." image="/placeholders/hero-product.svg" primaryHref="/wholesale/" primaryLabel="Trade enquiry" secondaryHref="/quality/" secondaryLabel="Quality proof" />
 
   <section class="section">
-    <SectionHeader
-      eyebrow="Kacchi ghani mustard oil"
-      title="Current product tree"
-      text="The initial tree is mustard oil focused. Later you can add refined oil, blended oil, or other agro-processing products as separate categories."
-    />
     <div class="grid products">
       {products.map((product) => <ProductCard product={product} />)}
     </div>
+  </section>
+
+  <section class="section amber-block">
+    <p class="eyebrow">Product manager note</p>
+    <h2>The catalog is intentionally split by SKU and use case.</h2>
+    <p>A 1 litre buyer, a 15 kg tin buyer, and a distributor asking for cartons are not the same lead. Separate pages let search engines and sales conversations match the right landing page to the right person.</p>
   </section>
 </BaseLayout>

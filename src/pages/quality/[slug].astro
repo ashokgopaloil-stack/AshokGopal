@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { qualityPages } from "../../data/pages";
+
+export function getStaticPaths() {
+  return qualityPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.description}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Quality", href: "/quality/" }, { name: page.title, href: `/quality/${page.slug}/` }]} />
+  <section class="page-hero rich-hero">
+    <div>
+      <p class="eyebrow">{page.eyebrow}</p>
+      <h1>{page.title}</h1>
+      <p class="lead">{page.description}</p>
+    </div>
+    <img src="/placeholders/social-packaging.svg" alt="Quality proof placeholder" />
+  </section>
+  <section class="grid three section">
+    {page.bullets.map((bullet) => <div class="card text-card"><h3>{bullet}</h3><p>Replace this placeholder with specific evidence, dates, photos, PDF links, or packaging references.</p></div>)}
+  </section>
+  <section class="section amber-block">
+    <p class="eyebrow">Before launch</p>
+    <h2>Evidence checklist</h2>
+    <ul><li>License or document image</li><li>Packaging panel photo</li><li>Batch or report date</li><li>Contact route for business buyers</li></ul>
+  </section>
+  <CTA href="/contact/" label={page.cta} />
+</BaseLayout>

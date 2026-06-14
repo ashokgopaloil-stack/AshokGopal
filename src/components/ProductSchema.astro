@@ -23,7 +23,7 @@ const data = {
   category: product.category,
   offers: {
     "@type": "Offer",
-    url: `${SITE.url}/products/${product.slug}/`,
+    url: new URL(`/products/${product.slug}/`, SITE.url).toString(),
     priceCurrency: "INR",
     price: product.schemaPrice,
     availability: product.availability,

@@ -1,0 +1,27 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  description: string;
+  image?: string;
+  primaryHref?: string;
+  primaryLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
+}
+const { eyebrow, title, description, image, primaryHref, primaryLabel, secondaryHref, secondaryLabel } = Astro.props;
+---
+<section class="page-hero rich-hero">
+  <div>
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    {(primaryHref || secondaryHref) && (
+      <div class="hero-actions">
+        {primaryHref && <a class="button" href={primaryHref}>{primaryLabel}</a>}
+        {secondaryHref && <a class="button secondary" href={secondaryHref}>{secondaryLabel}</a>}
+      </div>
+    )}
+  </div>
+  {image && <img src={image} alt="Ashok Gopal visual placeholder" loading="eager" />}
+</section>

@@ -6,20 +6,19 @@ interface Crumb {
   name: string;
   href: string;
 }
-
 interface Props {
-  items: Crumb[];
+  crumbs: Crumb[];
 }
 
-const { items } = Astro.props;
+const { crumbs } = Astro.props;
 const data = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: items.map((item, index) => ({
+  itemListElement: crumbs.map((crumb, index) => ({
     "@type": "ListItem",
     position: index + 1,
-    name: item.name,
-    item: new URL(item.href, SITE.url).toString()
+    name: crumb.name,
+    item: new URL(crumb.href, SITE.url).toString()
   }))
 };
 ---

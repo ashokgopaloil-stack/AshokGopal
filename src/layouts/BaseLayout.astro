@@ -33,6 +33,7 @@ const imageUrl = new URL(image ?? SITE.defaultImage, SITE.url).toString();
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <meta name="theme-color" content="#6f230f" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />

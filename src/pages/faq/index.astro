@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import FAQSchema from "../../components/FAQSchema.astro";
+const faqs = [
+  { question: "What does Ashok Gopal sell?", answer: "The site is structured around kacchi ghani mustard oil products across household, retail, and wholesale pack sizes." },
+  { question: "Can distributors apply online?", answer: "Yes. The wholesale page includes fields for GSTIN, FSSAI license, district coverage, warehouse capacity, and expected monthly volume." },
+  { question: "Are current photos final?", answer: "No. Current photos are placeholders. Replace them with real product, factory, label, retailer, and distribution photographs." },
+  { question: "Should health claims be added?", answer: "Only add claims that are supported by packaging, certification, or reliable documents. Avoid broad medical promises." }
+];
+---
+<BaseLayout title="FAQ" description="Frequently asked questions about Ashok Gopal mustard oil products, wholesale supply, distributor enquiry, and website proof placeholders.">
+  <FAQSchema slot="head" faqs={faqs} />
+  <PageHero eyebrow="FAQ" title="Common questions for buyers and trade partners." description="Use this page to reduce repeated sales questions and capture long-tail search demand." image="/placeholders/social-preview.svg" />
+  <section class="faq-block section">{faqs.map((faq) => <details open><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
+</BaseLayout>

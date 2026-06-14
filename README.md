@@ -1,36 +1,30 @@
-# Ashok Gopal Website
+# Ashok Gopal Astro Website
 
-Astro static site for Ashok Gopal edible oil manufacturing, product discovery, and wholesale/distributor acquisition.
+SEO-first Astro website for Ashok Gopal kacchi ghani mustard oil.
 
-## Run locally
+## What this pass contains
+
+- Static Astro site scaffold.
+- 40+ generated pages from product, recipe, wholesale district, manufacturing, and quality data.
+- Product schema, organization schema, local business schema, breadcrumb schema, and FAQ schema.
+- District-wise wholesale pages for West Bengal distributor discovery.
+- B2B pages for distributor, super stockist, retailer, restaurant supply, and institutional buyers.
+- Recipe hub to connect Instagram/Facebook content to permanent SEO pages.
+- Placeholder images for product, factory, social, recipe, and distribution assets.
+- Netlify-ready forms and deployment config.
+
+## Commands
 
 ```bash
 npm install
 npm run dev
-```
-
-## Build
-
-```bash
 npm run build
-npm run preview
 ```
 
-## What is included
+## High priority replacements before launch
 
-- Static SEO-first Astro pages.
-- Product catalog hierarchy with dynamic product pages.
-- Wholesale/distributor enquiry form structure.
-- Manufacturing, quality, heritage cooking, and contact pages.
-- Organization, LocalBusiness, Breadcrumb, and Product JSON-LD schema.
-- Sitemap and robots routes.
-- Placeholder SVG assets for product/factory/social photos.
-
-## Replace before launch
-
-Update these files once final data/photos are ready:
-
-- `src/data/site.ts`: verified phone, address, WhatsApp number, domain, coordinates.
-- `src/data/products.ts`: exact SKUs, pack sizes, MRP/price, product images.
-- `public/placeholders/*`: replace with actual factory, product, packaging, cooking, and social media photos.
-- `src/pages/quality/index.astro`: add actual FSSAI/certification/lab report links.
+1. Replace placeholders in `public/placeholders/` with real product, factory, label, batch, and retailer photos.
+2. Update `src/data/site.ts` with final domain, phone, WhatsApp, email, and address.
+3. Update `src/data/products.ts` with real MRP, SKU, barcode, carton, MOQ, and availability.
+4. Add FSSAI, lab report, and packaging-proof documents to quality pages.
+5. Connect Netlify Forms or backend lead storage for contact and wholesale forms.

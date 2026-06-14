@@ -1,66 +1,28 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { qualityPages } from "../../data/pages";
 ---
-<BaseLayout
-  title="Quality, Certification, and Food Safety"
-  description="Ashok Gopal quality page for FSSAI details, vitamin enrichment notes, batch discipline, lab reports, and edible-oil safety documentation."
->
-  <Fragment slot="head">
-    <BreadcrumbSchema items={[
-      { name: "Home", href: "/" },
-      { name: "Quality", href: "/quality/" }
-    ]} />
-  </Fragment>
+<BaseLayout title="Quality and Food Safety" description="Ashok Gopal quality pages for FSSAI, vitamin enrichment, storage hygiene, and lab report placeholders.">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Quality", href: "/quality/" }]} />
+  <PageHero eyebrow="Quality and compliance" title="Make every claim document-backed and easy to verify." description="Edible oil buyers need trust. This section is structured for FSSAI details, nutrition label proof, hygiene discipline, and lab report uploads once available." image="/placeholders/social-packaging.svg" primaryHref="/quality/fssai/" primaryLabel="FSSAI details" secondaryHref="/quality/lab-reports/" secondaryLabel="Lab report slots" />
 
-  <nav class="breadcrumb"><a href="/">Home</a> / Quality</nav>
-
-  <section class="page-hero">
-    <p class="eyebrow">Quality and trust</p>
-    <h1>Turn compliance into buyer confidence.</h1>
-    <p>
-      Edible-oil buyers need proof, not vague claims. Use this page for FSSAI details, batch checks,
-      vitamin enrichment notes, storage discipline, and downloadable documents.
-    </p>
+  <section class="grid three section">
+    {qualityPages.map((page) => (
+      <a class="card text-card" href={`/quality/${page.slug}/`}>
+        <span class="eyebrow">{page.eyebrow}</span>
+        <h3>{page.title}</h3>
+        <p>{page.description}</p>
+      </a>
+    ))}
   </section>
 
-  <section class="section">
-    <div class="grid three">
-      <article class="requirement-card">
-        <h3>FSSAI license</h3>
-        <p>Add verified FSSAI number, license image, validity, and issuing authority before launch.</p>
-      </article>
-      <article class="requirement-card">
-        <h3>Vitamin enrichment</h3>
-        <p>Use precise label copy for Vitamins A, D2, and E only after confirming packaging and compliance wording.</p>
-      </article>
-      <article class="requirement-card">
-        <h3>Batch discipline</h3>
-        <p>Explain batch coding, packing dates, storage, and recall/contact procedure in simple language.</p>
-      </article>
-      <article class="requirement-card">
-        <h3>Lab reports</h3>
-        <p>Create PDF slots for reports such as moisture, FFA, adulteration checks, and other relevant tests.</p>
-      </article>
-      <article class="requirement-card">
-        <h3>Packaging checks</h3>
-        <p>Show sealed cap, label, SKU, carton, and storage instructions on product pages.</p>
-      </article>
-      <article class="requirement-card">
-        <h3>Distributor trust</h3>
-        <p>Add trade certificates, GST details, and customer-support contact details for bulk buyers.</p>
-      </article>
-    </div>
+  <section class="section amber-block">
+    <p class="eyebrow">Claim discipline</p>
+    <h2>Keep the website trustworthy by avoiding unsupported health promises.</h2>
+    <p>Use packaging-backed wording, document-backed quality statements, and verified certifications. Where proof is not uploaded yet, keep the copy as a placeholder and do not overstate.</p>
   </section>
-
-  <section class="section">
-    <div class="panel accent">
-      <p class="eyebrow">Do not overclaim</p>
-      <h2>Use restrained, verifiable health copy.</h2>
-      <p>
-        Keep health messaging factual and label-backed. Avoid disease-cure claims. Focus on traditional taste,
-        culinary use, quality process, and verified regulatory information.
-      </p>
-    </div>
-  </section>
+  <CTA />
 </BaseLayout>

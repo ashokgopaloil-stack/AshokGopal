@@ -1,90 +1,94 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProductSchema from "../../components/ProductSchema.astro";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import ProductSchema from "../../components/ProductSchema.astro";
+import FAQSchema from "../../components/FAQSchema.astro";
 import CTA from "../../components/CTA.astro";
 import { products } from "../../data/products";
-import { SITE } from "../../data/site";
+import { whatsappLink } from "../../data/site";
 
 export function getStaticPaths() {
-  return products.map((product) => ({
-    params: { slug: product.slug },
-    props: { product }
-  }));
+  return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
 }
 
 const { product } = Astro.props;
+const faqs = [
+  {
+    question: `Who is ${product.name} suitable for?`,
+    answer: product.idealFor.join(", ")
+  },
+  {
+    question: "Can I enquire for wholesale or distributor rates?",
+    answer: "Yes. Use the wholesale enquiry form or WhatsApp sales with your city, business type, expected monthly volume, GSTIN, and preferred pack sizes."
+  },
+  {
+    question: "Are the product photos final?",
+    answer: "Current visuals are placeholders. Replace them with real front-pack, back-pack, carton, MRP, batch, and factory photos before launch."
+  }
+];
 ---
-<BaseLayout
-  title={product.name}
-  description={product.summary}
-  image={product.image}
->
-  <Fragment slot="head">
-    <ProductSchema product={product} />
-    <BreadcrumbSchema items={[
-      { name: "Home", href: "/" },
-      { name: "Products", href: "/products/" },
-      { name: product.name, href: `/products/${product.slug}/` }
-    ]} />
-  </Fragment>
-
-  <nav class="breadcrumb"><a href="/">Home</a> / <a href="/products/">Products</a> / {product.name}</nav>
+<BaseLayout title={product.name} description={product.summary} image={product.image}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: product.shortName, href: `/products/${product.slug}/` }]} />
+  <ProductSchema slot="head" product={product} />
+  <FAQSchema slot="head" faqs={faqs} />
 
   <section class="product-detail">
-    <div class="panel">
+    <div class="product-media">
       <img src={product.image} alt={`${product.name} packaging placeholder`} />
+      <p class="photo-note">Photo placeholder: add front pack, back label, batch panel, carton, and factory dispatch images.</p>
     </div>
-
-    <article class="panel">
-      <p class="eyebrow">{product.category}</p>
+    <div>
+      <p class="eyebrow">{product.category} · {product.packSize}</p>
       <h1>{product.name}</h1>
-      <p class="lead">{product.description}</p>
-
-      <table class="spec-table">
-        <tbody>
-          <tr>
-            <th>SKU</th>
-            <td>{product.sku}</td>
-          </tr>
-          <tr>
-            <th>Pack size</th>
-            <td>{product.packSize}</td>
-          </tr>
-          <tr>
-            <th>Price</th>
-            <td>{product.priceLabel}</td>
-          </tr>
-          <tr>
-            <th>Storage</th>
-            <td>{product.storage}</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Best suited for</h2>
-      <ul class="check-list">
-        {product.idealFor.map((item) => <li>{item}</li>)}
-      </ul>
-
-      <h2>Product notes</h2>
-      <ul class="check-list">
-        {product.features.map((feature) => <li>{feature}</li>)}
-      </ul>
-
-      <div class="hero-actions">
-        <a class="button primary" href={`https://wa.me/${SITE.whatsapp}`}>Ask on WhatsApp</a>
-        <a class="button secondary" href="/wholesale/">Wholesale enquiry</a>
+      <p class="lead">{product.summary}</p>
+      <p>{product.description}</p>
+      <div class="price-box">
+        <strong>{product.priceLabel}</strong>
+        <span>SKU: {product.sku}</span>
       </div>
-    </article>
+      <div class="hero-actions">
+        <a class="button" href={whatsappLink(`I want to enquire about ${product.name}.`)}>WhatsApp enquiry</a>
+        <a class="button secondary" href="/wholesale/">Wholesale form</a>
+      </div>
+    </div>
   </section>
 
-  <CTA
-    title="Need carton, wholesale, or distributor pricing?"
-    text="Use the wholesale form and mention the SKU, pack size, district, and expected monthly volume."
-    primaryHref="/wholesale/"
-    primaryLabel="Request wholesale rate"
-    secondaryHref="/contact/"
-    secondaryLabel="Contact sales"
-  />
+  <section class="grid three section">
+    <div class="card text-card">
+      <p class="eyebrow">Best fit</p>
+      <ul>{product.idealFor.map((item) => <li>{item}</li>)}</ul>
+    </div>
+    <div class="card text-card">
+      <p class="eyebrow">Product signals</p>
+      <ul>{product.features.map((item) => <li>{item}</li>)}</ul>
+    </div>
+    <div class="card text-card">
+      <p class="eyebrow">Buyer intent</p>
+      <ul>{product.buyerIntent.map((item) => <li>{item}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="split-section amber-block">
+    <div>
+      <p class="eyebrow">Storage</p>
+      <h2>Handling and storage guidance</h2>
+      <p>{product.storage}</p>
+    </div>
+    <div>
+      <p class="eyebrow">Packaging checklist</p>
+      <ul>{product.packagingNotes.map((note) => <li>{note}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="faq-block section">
+    <h2>Common questions</h2>
+    {faqs.map((faq) => (
+      <details>
+        <summary>{faq.question}</summary>
+        <p>{faq.answer}</p>
+      </details>
+    ))}
+  </section>
+
+  <CTA title="Need this SKU for retail, restaurant, or distributor supply?" text="Send your pack-size requirement, city, business type, and estimated monthly volume. This page is designed to be shared directly in WhatsApp sales conversations." href="/wholesale/" label="Open wholesale enquiry" />
 </BaseLayout>
