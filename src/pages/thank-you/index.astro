@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+---
+<BaseLayout title="Enquiry Received" description="Thank you for contacting Ashok Gopal.">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Thank You", href: "/thank-you/" }]} />
+  <section class="page-hero"><p class="eyebrow">Enquiry received</p><h1>Thank you. Your enquiry has been captured.</h1><p class="lead">For faster response, also send your name, city, business type, pack size and monthly requirement on WhatsApp.</p><div class="hero-actions"><a class="button" href="/products/">View products</a><a class="button secondary" href="/wholesale/">Wholesale page</a></div></section>
+</BaseLayout>

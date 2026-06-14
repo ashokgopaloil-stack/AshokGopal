@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+---
+<BaseLayout title="Sample Programme" description="Sample programme for retailers, restaurants, distributors, home chefs and recipe creators.">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Samples", href: "/samples/" }]} />
+  <section class="page-hero"><p class="eyebrow">Sampling funnel</p><h1>Use samples to create first taste and trade proof.</h1><p class="lead">A mustard oil brand can convert faster when retailers, chefs and home cooks taste aroma and pungency. Track every sample by buyer type, district and follow-up date.</p></section>
+  <section class="section grid three">{["Retailer trial bottle", "Restaurant chef sample", "Distributor counter kit", "Recipe creator kit", "Festival sampling", "Complaint replacement sample"].map((item) => <div class="card text-card"><h3>{item}</h3><p>Define quantity, owner, approval rule, delivery method and follow-up script.</p></div>)}</section>
+</BaseLayout>

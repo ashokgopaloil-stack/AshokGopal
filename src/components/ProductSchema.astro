@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { product } = Astro.props;
+const hasRealPrice = product.schemaPrice && product.schemaPrice !== "0.00";
 const data = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -21,18 +22,22 @@ const data = {
     name: SITE.name
   },
   category: product.category,
-  offers: {
-    "@type": "Offer",
-    url: new URL(`/products/${product.slug}/`, SITE.url).toString(),
-    priceCurrency: "INR",
-    price: product.schemaPrice,
-    availability: product.availability,
-    itemCondition: "https://schema.org/NewCondition",
-    seller: {
-      "@type": "Organization",
-      name: SITE.legalName
-    }
-  }
+  ...(hasRealPrice
+    ? {
+        offers: {
+          "@type": "Offer",
+          url: new URL(`/products/${product.slug}/`, SITE.url).toString(),
+          priceCurrency: "INR",
+          price: product.schemaPrice,
+          availability: product.availability,
+          itemCondition: "https://schema.org/NewCondition",
+          seller: {
+            "@type": "Organization",
+            name: SITE.legalName
+          }
+        }
+      }
+    : {})
 };
 ---
 <JsonLd data={data} />

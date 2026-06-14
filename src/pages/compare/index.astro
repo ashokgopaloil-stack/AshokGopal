@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { comparisonPages } from "../../data/contentPages";
+---
+<BaseLayout title="Mustard Oil Comparisons" description="Careful comparison pages for mustard oil buyers comparing pack formats, process terms, and cooking oils.">
+  <PageHero eyebrow="Comparison hub" title="Comparison pages that answer search demand without reckless claims." description="Use these pages to capture buyer questions, then link to product, guide, and wholesale pages." />
+  <section class="section grid three">{comparisonPages.map((page) => <a class="card text-card" href={`/compare/${page.slug}/`}><h3>{page.title}</h3><p>{page.summary}</p></a>)}</section>
+</BaseLayout>

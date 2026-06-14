@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import BreadcrumbSchema from "../../../components/BreadcrumbSchema.astro";
 import FAQSchema from "../../../components/FAQSchema.astro";
+import RecipeSchema from "../../../components/RecipeSchema.astro";
 import CTA from "../../../components/CTA.astro";
 import { recipes } from "../../../data/recipes";
 
@@ -11,12 +12,13 @@ export function getStaticPaths() {
 const { recipe } = Astro.props;
 const faqs = [
   { question: "Are these final recipes?", answer: "The page structure is ready. Add tested ingredient quantities, final photos, and family-style preparation details before a public recipe campaign." },
-  { question: "Why build recipe pages for an oil brand?", answer: "Recipe pages capture high-intent regional search, give social posts a permanent URL, and help shoppers understand where the product fits in daily cooking." }
+  { question: "Why build recipe pages for an oil brand?", answer: "Recipe pages capture regional search, give social posts a permanent URL, and help shoppers understand where the product fits in daily cooking." }
 ];
 ---
 <BaseLayout title={recipe.title} description={recipe.summary} image={recipe.image}>
   <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Heritage Cooking", href: "/heritage-cooking/" }, { name: recipe.title, href: `/heritage-cooking/recipes/${recipe.slug}/` }]} />
   <FAQSchema slot="head" faqs={faqs} />
+  <RecipeSchema slot="head" recipe={recipe} path={`/heritage-cooking/recipes/${recipe.slug}/`} />
   <section class="product-detail recipe-detail">
     <div class="product-media"><img src={recipe.image} alt={`${recipe.title} placeholder`} /><p class="photo-note">Replace with final cooked dish photo, ingredient photo, and reel thumbnail.</p></div>
     <div>
@@ -24,6 +26,7 @@ const faqs = [
       <h1>{recipe.title}</h1>
       <p class="lead">{recipe.summary}</p>
       <p><strong>Mustard oil role:</strong> {recipe.cookingUse}</p>
+      <p><strong>Prep:</strong> {recipe.prepTime} · <strong>Cook:</strong> {recipe.cookTime} · <strong>Yield:</strong> {recipe.yield}</p>
       <div class="tag-row">{recipe.keywords.map((keyword) => <span>{keyword}</span>)}</div>
     </div>
   </section>

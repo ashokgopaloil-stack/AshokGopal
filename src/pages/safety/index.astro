@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import CollectionSchema from "../../components/CollectionSchema.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import ClaimDisclaimer from "../../components/ClaimDisclaimer.astro";
+import { safetyPages } from "../../data/safetyPages";
+---
+<BaseLayout title="Mustard Oil Safety and Claim Policy" description="Responsible mustard oil education pages covering label checks, storage, erucic acid, cooking use and claim safety.">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Safety", href: "/safety/" }]} />
+  <CollectionSchema slot="head" name="Safety and Claims" description="Responsible mustard oil safety, label and claim-control pages." path="/safety/" items={safetyPages.map((page) => ({ name: page.title, href: `/safety/${page.slug}/` }))} />
+  <PageHero eyebrow="Safety and claims" title="Educate without overclaiming." description="This cluster protects the brand by separating cooking tradition and product facts from unsupported medical or wellness claims." image="/placeholders/social-preview.svg" primaryHref="/quality/" primaryLabel="Quality pages" secondaryHref="/mustard-oil/" secondaryLabel="Mustard oil guide" />
+  <ClaimDisclaimer />
+  <section class="section grid three">{safetyPages.map((page) => <a class="card text-card" href={`/safety/${page.slug}/`}><h3>{page.title}</h3><p>{page.summary}</p></a>)}</section>
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+---
+<BaseLayout title="Launch Readiness Checklist" description="Internal launch checklist for Ashok Gopal website." noindex={true}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Launch Readiness", href: "/launch-readiness/" }]} />
+  <section class="page-hero"><p class="eyebrow">Internal QA</p><h1>Launch only after truth, proof and forms are ready.</h1><p class="lead">The site has scale. Launch quality depends on final business data, product facts, photos, compliance proof and lead handling.</p></section>
+  <section class="section grid two">
+    <div class="card text-card"><h2>P0 launch blockers</h2><ul><li>Real phone, WhatsApp, email, address and map coordinates.</li><li>Final MRP, carton, case weight, barcode and FSSAI details.</li><li>Real pack photos for 1 L, 5 L and 15 kg/tin SKUs.</li><li>Working Netlify forms or backend capture.</li><li>Search Console and analytics installed.</li></ul></div>
+    <div class="card text-card"><h2>Indexing policy</h2><ul><li>Index strong product, wholesale, manufacturing, quality and district pages first.</li><li>Keep sales-kit and launch-readiness noindexed.</li><li>Do not index thin pages until real photos and details are added.</li><li>Validate schema before public indexing.</li></ul></div>
+  </section>
+</BaseLayout>

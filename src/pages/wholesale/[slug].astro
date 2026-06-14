@@ -5,6 +5,8 @@ import CTA from "../../components/CTA.astro";
 import { districts } from "../../data/districts";
 import { b2bSegments } from "../../data/pages";
 import { whatsappLink } from "../../data/site";
+import type { District } from "../../data/districts";
+import type { LandingPage } from "../../data/pages";
 
 const allPages = [
   ...districts.map((district) => ({ type: "district", slug: district.slug, data: district })),
@@ -16,18 +18,25 @@ export function getStaticPaths() {
 }
 const { page } = Astro.props;
 const isDistrict = page.type === "district";
-const data = page.data;
+const data = page.data as District | LandingPage;
+
+// Compute all display values outside JSX for proper type safety
+const pageTitle = isDistrict ? (data as District).headline : (data as LandingPage).title;
+const pageDescription = isDistrict ? (data as District).summary : (data as LandingPage).description;
+const pageEyebrow = isDistrict ? "District trade landing page" : (data as LandingPage).eyebrow;
+const pageName = isDistrict ? (data as District).name : (data as LandingPage).title;
+const ctaTitle = isDistrict ? `Want Ashok Gopal supply in ${(data as District).name}?` : (data as LandingPage).cta;
 ---
-<BaseLayout title={isDistrict ? data.headline : data.title} description={isDistrict ? data.summary : data.description}>
-  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Wholesale", href: "/wholesale/" }, { name: isDistrict ? data.name : data.title, href: `/wholesale/${page.slug}/` }]} />
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Wholesale", href: "/wholesale/" }, { name: pageName, href: `/wholesale/${page.slug}/` }]} />
 
   <section class="page-hero rich-hero">
     <div>
-      <p class="eyebrow">{isDistrict ? "District trade landing page" : data.eyebrow}</p>
-      <h1>{isDistrict ? data.headline : data.title}</h1>
-      <p class="lead">{isDistrict ? data.summary : data.description}</p>
+      <p class="eyebrow">{pageEyebrow}</p>
+      <h1>{pageTitle}</h1>
+      <p class="lead">{pageDescription}</p>
       <div class="hero-actions">
-        <a class="button" href={whatsappLink(`I want to enquire about Ashok Gopal supply for ${isDistrict ? data.name : data.title}.`)}>WhatsApp enquiry</a>
+        <a class="button" href={whatsappLink(`I want to enquire about Ashok Gopal supply for ${pageName}.`)}>WhatsApp enquiry</a>
         <a class="button secondary" href="/wholesale/#wholesale-form">Wholesale form</a>
       </div>
     </div>
@@ -36,13 +45,13 @@ const data = page.data;
 
   {isDistrict ? (
     <section class="grid three section">
-      <div class="card text-card"><p class="eyebrow">Buyer types</p><ul>{data.buyerTypes.map((item) => <li>{item}</li>)}</ul></div>
-      <div class="card text-card"><p class="eyebrow">Priority markets</p><ul>{data.priorityMarkets.map((item) => <li>{item}</li>)}</ul></div>
-      <div class="card text-card"><p class="eyebrow">Sales angle</p><p>{data.leadAngle}</p></div>
+      <div class="card text-card"><p class="eyebrow">Buyer types</p><ul>{(data as District).buyerTypes.map((item: string) => <li>{item}</li>)}</ul></div>
+      <div class="card text-card"><p class="eyebrow">Priority markets</p><ul>{(data as District).priorityMarkets.map((item: string) => <li>{item}</li>)}</ul></div>
+      <div class="card text-card"><p class="eyebrow">Sales angle</p><p>{(data as District).leadAngle}</p></div>
     </section>
   ) : (
     <section class="grid three section">
-      {data.bullets.map((bullet) => <div class="card text-card"><p>{bullet}</p></div>)}
+      {(data as LandingPage).bullets.map((bullet: string) => <div class="card text-card"><p>{bullet}</p></div>)}
     </section>
   )}
 
@@ -61,5 +70,5 @@ const data = page.data;
     </div>
   </section>
 
-  <CTA title={isDistrict ? `Want Ashok Gopal supply in ${data.name}?` : data.cta} text="Send business type, district, GSTIN, monthly expected volume, and product pack requirement." href="/wholesale/#wholesale-form" label="Open enquiry form" />
+  <CTA title={ctaTitle} text="Send business type, district, GSTIN, monthly expected volume, and product pack requirement." href="/wholesale/#wholesale-form" label="Open enquiry form" />
 </BaseLayout>

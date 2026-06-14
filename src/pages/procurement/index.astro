@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { procurementPages } from "../../data/procurementPages";
+---
+<BaseLayout title="Mustard Oil Procurement Readiness" description="Procurement, document, marketplace listing, and institutional buying checklists for Ashok Gopal mustard oil.">
+  <PageHero eyebrow="Procurement readiness" title="Document and data pages for serious bulk buyers." description="These pages prepare Ashok Gopal for institutional, marketplace, restaurant, retailer, distributor, and government-style procurement conversations." />
+  <section class="section grid three">{procurementPages.map((page) => <a class="card text-card" href={`/procurement/${page.slug}/`}><h3>{page.title}</h3><p>{page.summary}</p></a>)}</section>
+</BaseLayout>

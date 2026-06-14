@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import CollectionSchema from "../../components/CollectionSchema.astro";
+import { buyerUseCases } from "../../data/contentPages";
+---
+<BaseLayout title="Mustard Oil Buyer Use Cases" description="Dedicated mustard oil supply pages for restaurants, caterers, retailers, institutions, and trade buyers.">
+  <CollectionSchema slot="head" name="Mustard Oil Buyer Use Cases" description="B2B use-case pages for Ashok Gopal mustard oil" path="/buyers/" items={buyerUseCases.map((page) => ({ name: page.title, href: `/buyers/${page.slug}/` }))} />
+  <PageHero eyebrow="Buyer use cases" title="Pages for every serious mustard oil buyer type." description="These pages let ads, WhatsApp shares, and search traffic land on the exact buyer context: restaurant, kirana, caterer, distributor, or institution." />
+  <section class="section grid three">{buyerUseCases.map((page) => <a class="card text-card" href={`/buyers/${page.slug}/`}><h3>{page.title}</h3><p>{page.summary}</p></a>)}</section>
+</BaseLayout>

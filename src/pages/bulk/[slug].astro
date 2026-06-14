@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { bulkSupplyPages } from "../../data/contentPages";
+export function getStaticPaths() { return bulkSupplyPages.map((page) => ({ params: { slug: page.slug }, props: { page } })); }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.summary}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Bulk Supply", href: "/bulk/" }, { name: page.title, href: `/bulk/${page.slug}/` }]} />
+  <section class="page-hero rich-hero"><div><p class="eyebrow">Bulk supply · {page.pack}</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src="/placeholders/product-tin.svg" alt="Bulk mustard oil placeholder" /></section>
+  <section class="grid three section"><div class="card text-card"><p class="eyebrow">Specs to confirm</p><ul>{page.specs.map((item) => <li>{item}</li>)}</ul></div><div class="card text-card"><p class="eyebrow">Buyer fit</p><ul>{page.buyerFit.map((item) => <li>{item}</li>)}</ul></div><div class="card text-card"><p class="eyebrow">Proof assets</p><p>Add pack photo, carton photo, side panel, batch/MRP panel, and dispatch image.</p></div></section>
+  <CTA title="Ask for bulk pricing." text="Send pack size, delivery district, monthly volume, and billing details." href="/wholesale/#wholesale-form" label="Bulk enquiry form" />
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import ArticleSchema from "../../components/ArticleSchema.astro";
+import MarketplaceChecklist from "../../components/MarketplaceChecklist.astro";
+import ClaimDisclaimer from "../../components/ClaimDisclaimer.astro";
+import CTA from "../../components/CTA.astro";
+import { marketplacePages } from "../../data/marketplacePages";
+export function getStaticPaths() {
+  return marketplacePages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.summary} image="/placeholders/social-packaging.svg">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Marketplaces", href: "/marketplaces/" }, { name: page.title, href: `/marketplaces/${page.slug}/` }]} />
+  <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/marketplaces/${page.slug}/`} image="/placeholders/social-packaging.svg" />
+  <section class="page-hero rich-hero"><div><p class="eyebrow">{page.channel} · {page.intent}</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src="/placeholders/social-packaging.svg" alt={`${page.title} placeholder`} /></section>
+  <section class="section grid two">
+    <MarketplaceChecklist requirements={page.requirements} />
+    <div class="card text-card"><p class="eyebrow">Content angles</p><ul>{page.contentAngles.map((angle) => <li>{angle}</li>)}</ul></div>
+  </section>
+  <ClaimDisclaimer />
+  <CTA title={page.cta} text="Use this page to prepare the data, photos, documents and claim-safe copy needed before opening or scaling this channel." href="/wholesale/" label="Start trade enquiry" secondaryHref="/downloads/" secondaryLabel="Download assets" />
+</BaseLayout>

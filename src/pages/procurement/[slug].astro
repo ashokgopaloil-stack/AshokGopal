@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { procurementPages } from "../../data/procurementPages";
+export function getStaticPaths() { return procurementPages.map((page) => ({ params: { slug: page.slug }, props: { page } })); }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.summary}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Procurement", href: "/procurement/" }, { name: page.title, href: `/procurement/${page.slug}/` }]} />
+  <section class="page-hero rich-hero"><div><p class="eyebrow">Procurement page</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src="/placeholders/social-packaging.svg" alt="Procurement readiness placeholder" /></section>
+  <section class="section grid three">{page.items.map((item) => <div class="card text-card"><h3>{item}</h3><p>Add final operational detail, document, or image proof for this checklist item.</p></div>)}</section>
+  <CTA title="Prepare this before scaling sales." text="Procurement buyers move faster when product data, documents, pack photos, and commercial terms are ready." href="/wholesale/" label="Wholesale enquiry" />
+</BaseLayout>

@@ -1,0 +1,10 @@
+---
+interface Props {
+  requirements: readonly string[];
+}
+const { requirements } = Astro.props;
+---
+<div class="card text-card marketplace-checklist">
+  <p class="eyebrow">Listing checklist</p>
+  <ul>{requirements.map((item) => <li>{item}</li>)}</ul>
+</div>

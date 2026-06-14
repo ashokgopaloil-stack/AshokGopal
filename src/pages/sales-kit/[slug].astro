@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import { salesKitPages } from "../../data/salesKitPages";
+export function getStaticPaths() { return salesKitPages.map((page) => ({ params: { slug: page.slug }, props: { page } })); }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.summary} noindex={true}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Sales Kit", href: "/sales-kit/" }, { name: page.title, href: `/sales-kit/${page.slug}/` }]} />
+  <section class="page-hero"><p class="eyebrow">Internal sales kit</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></section>
+  <section class="section grid two"><div class="card text-card"><p class="eyebrow">Steps</p><ol>{page.steps.map((step) => <li>{step}</li>)}</ol></div><div class="card text-card"><p class="eyebrow">Deliverables</p><ul>{page.deliverables.map((item) => <li>{item}</li>)}</ul></div></section>
+</BaseLayout>

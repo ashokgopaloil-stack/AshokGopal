@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import { products } from "../../data/products";
+---
+<BaseLayout title="Wholesale Rate Card Request" description="Request Ashok Gopal wholesale rate card for mustard oil distributors, retailers, restaurants and institutional buyers." noindex={true}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Rate Card", href: "/rate-card/" }]} />
+  <section class="page-hero"><p class="eyebrow">Trade pricing</p><h1>Rate cards should be shared after lead qualification.</h1><p class="lead">This page is noindexed by default. Use it internally to define rate-card fields, approval owner, validity dates and buyer-specific price tiers.</p></section>
+  <section class="section"><table class="spec-table"><thead><tr><th>SKU</th><th>Pack</th><th>MRP</th><th>Distributor</th><th>Retailer</th><th>MOQ</th><th>Notes</th></tr></thead><tbody>{products.filter((p) => p.priority !== "planned").map((product) => <tr><td>{product.sku}</td><td>{product.packSize}</td><td>To add</td><td>Private</td><td>Private</td><td>To add</td><td>Confirm carton quantity and case weight</td></tr>)}</tbody></table></section>
+</BaseLayout>

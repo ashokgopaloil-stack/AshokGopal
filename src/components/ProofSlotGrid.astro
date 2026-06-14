@@ -1,0 +1,13 @@
+---
+interface Props {
+  title?: string;
+  slots: readonly string[];
+}
+const { title = "Proof assets to add", slots } = Astro.props;
+---
+<div class="proof-slot-grid">
+  <h2>{title}</h2>
+  <div class="grid three">
+    {slots.map((slot) => <div class="card text-card proof-slot"><p class="eyebrow">Asset slot</p><h3>{slot}</h3><p>Replace this placeholder with a real image, document, or verified product detail before launch.</p></div>)}
+  </div>
+</div>

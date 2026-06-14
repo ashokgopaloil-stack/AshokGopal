@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { bulkSupplyPages } from "../../data/contentPages";
+---
+<BaseLayout title="Bulk Mustard Oil Supply" description="Bulk mustard oil pack pages for 500 ml cartons, 1 litre cartons, 5 litre jars, 15 kg tins, and institutional monthly supply.">
+  <PageHero eyebrow="Bulk supply" title="Bulk mustard oil pages by pack size and buyer intent." description="Commercial buyers search by pack size. These pages isolate that demand and route buyers to trade enquiry." />
+  <section class="section grid three">{bulkSupplyPages.map((page) => <a class="card text-card" href={`/bulk/${page.slug}/`}><p class="eyebrow">{page.pack}</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}</section>
+</BaseLayout>

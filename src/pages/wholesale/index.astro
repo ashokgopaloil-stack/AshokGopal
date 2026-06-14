@@ -45,8 +45,10 @@ import { b2bSegments } from "../../data/pages";
         <li>Districts and monthly volume for territory planning.</li>
       </ul>
     </div>
-    <form name="wholesale-enquiry" method="POST" data-netlify="true">
+    <form name="wholesale-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
       <input type="hidden" name="form-name" value="wholesale-enquiry" />
+      <p class="hidden"><label>Do not fill this field<input name="bot-field" /></label></p>
+      <input type="hidden" name="source_page" value="/wholesale/" />
       <label>Firm name<input name="firm_name" placeholder="Legal / trade name" required /></label>
       <label>Contact person<input name="contact_person" placeholder="Owner / manager name" required /></label>
       <label>Mobile / WhatsApp<input name="mobile" placeholder="10 digit mobile" required /></label>

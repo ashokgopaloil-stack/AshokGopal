@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import CollectionSchema from "../../components/CollectionSchema.astro";
+import { mustardOilGuides } from "../../data/contentPages";
+---
+<BaseLayout title="Mustard Oil Guide" description="Educational guides on mustard oil, kacchi ghani, pack labels, storage, Bengali cooking, and wholesale buying.">
+  <CollectionSchema slot="head" name="Mustard Oil Guide" description="Educational mustard oil guides by Ashok Gopal" path="/mustard-oil/" items={mustardOilGuides.map((page) => ({ name: page.title, href: `/mustard-oil/${page.slug}/` }))} />
+  <PageHero eyebrow="Mustard oil knowledge hub" title="A practical mustard oil guide for buyers, cooks, retailers, and distributors." description="Use this hub to answer search questions without forcing every topic onto the homepage. Each page links back to product and wholesale conversion paths." />
+  <section class="section grid three">
+    {mustardOilGuides.map((page) => <a class="card text-card" href={`/mustard-oil/${page.slug}/`}><p class="eyebrow">{page.cluster}</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}
+  </section>
+</BaseLayout>

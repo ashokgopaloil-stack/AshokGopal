@@ -1,0 +1,20 @@
+---
+import JsonLd from "./JsonLd.astro";
+import { SITE } from "../data/site";
+interface Props {
+  name: string;
+  description: string;
+  path: string;
+  items?: { name: string; href: string }[];
+}
+const { name, description, path, items = [] } = Astro.props;
+const data = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name,
+  description,
+  url: new URL(path, SITE.url).toString(),
+  hasPart: items.slice(0, 50).map((item) => ({ "@type": "WebPage", name: item.name, url: new URL(item.href, SITE.url).toString() }))
+};
+---
+<JsonLd data={data} />

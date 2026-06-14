@@ -1,0 +1,26 @@
+---
+import JsonLd from "./JsonLd.astro";
+import { SITE } from "../data/site";
+interface Props {
+  recipe: any;
+  path: string;
+}
+const { recipe, path } = Astro.props;
+const data = {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  name: recipe.title,
+  description: recipe.summary,
+  image: new URL(recipe.image, SITE.url).toString(),
+  recipeYield: recipe.yield,
+  prepTime: "PT15M",
+  cookTime: "PT25M",
+  totalTime: "PT40M",
+  recipeCategory: recipe.category,
+  recipeCuisine: "Bengali",
+  author: { "@type": "Organization", name: SITE.name },
+  mainEntityOfPage: new URL(path, SITE.url).toString(),
+  recipeInstructions: recipe.steps.map((step: string) => ({ "@type": "HowToStep", text: step }))
+};
+---
+<JsonLd data={data} />

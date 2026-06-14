@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import ArticleSchema from "../../components/ArticleSchema.astro";
+import FAQSchema from "../../components/FAQSchema.astro";
+import ClaimDisclaimer from "../../components/ClaimDisclaimer.astro";
+import CTA from "../../components/CTA.astro";
+import { safetyPages } from "../../data/safetyPages";
+export function getStaticPaths() { return safetyPages.map((page) => ({ params: { slug: page.slug }, props: { page } })); }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.summary} image={page.image}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Safety", href: "/safety/" }, { name: page.title, href: `/safety/${page.slug}/` }]} />
+  <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/safety/${page.slug}/`} image={page.image} />
+  <FAQSchema slot="head" faqs={[...page.faqs]} />
+  <section class="page-hero"><p class="eyebrow">Responsible education</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></section>
+  <section class="section article-shell">{page.sections.map((section) => <article class="card text-card"><h2>{section.heading}</h2><p>{section.body}</p></article>)}</section>
+  <ClaimDisclaimer />
+  <section class="faq-block section"><h2>Claim-control FAQ</h2>{page.faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
+  <CTA title="Need product facts instead?" text="For exact pack facts, use the product, quality and proof pages after final labels and documents are uploaded." href="/products/" label="View products" />
+</BaseLayout>

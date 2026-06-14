@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import ArticleSchema from "../../components/ArticleSchema.astro";
+import ProofSlotGrid from "../../components/ProofSlotGrid.astro";
+import CTA from "../../components/CTA.astro";
+import { proofPages } from "../../data/proofPages";
+export function getStaticPaths() { return proofPages.map((page) => ({ params: { slug: page.slug }, props: { page } })); }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.summary} image={page.image}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Proof", href: "/proof/" }, { name: page.title, href: `/proof/${page.slug}/` }]} />
+  <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/proof/${page.slug}/`} image={page.image} />
+  <section class="page-hero rich-hero"><div><p class="eyebrow">Proof asset</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src={page.image} alt={`${page.title} placeholder`} /></section>
+  <section class="section"><ProofSlotGrid slots={page.checklist} /></section>
+  <CTA title="Add this proof before launch." text="Replace placeholders with dated real photos, documents or verified product facts. Link the proof to the relevant SKU, district and wholesale page." href="/assets-needed/" label="Open photo plan" />
+</BaseLayout>

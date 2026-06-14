@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import ArticleSchema from "../../components/ArticleSchema.astro";
+import FAQSchema from "../../components/FAQSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { mustardOilGuides } from "../../data/contentPages";
+import { products } from "../../data/products";
+
+export function getStaticPaths() {
+  return mustardOilGuides.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+const { page } = Astro.props;
+const related = products.filter((product) => page.relatedProducts.includes(product.slug));
+---
+<BaseLayout title={page.title} description={page.summary} image={page.image}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Mustard Oil Guide", href: "/mustard-oil/" }, { name: page.title, href: `/mustard-oil/${page.slug}/` }]} />
+  <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/mustard-oil/${page.slug}/`} image={page.image} />
+  <FAQSchema slot="head" faqs={page.faqs} />
+  <section class="page-hero rich-hero">
+    <div><p class="eyebrow">{page.cluster} · {page.intent}</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div>
+    <img src={page.image} alt={`${page.title} placeholder`} />
+  </section>
+  <section class="section article-shell">
+    {page.sections.map((section) => <article class="card text-card"><h2>{section.heading}</h2><p>{section.body}</p></article>)}
+  </section>
+  <section class="section grid three">
+    {related.map((product) => <a class="card text-card" href={`/products/${product.slug}/`}><p class="eyebrow">Related product</p><h3>{product.shortName}</h3><p>{product.summary}</p></a>)}
+  </section>
+  <section class="faq-block section">
+    <h2>Questions to handle carefully</h2>
+    {page.faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}
+  </section>
+  <CTA title="Turn search interest into an enquiry." text="Each guide should link to the right pack, district page, or wholesale form so traffic has somewhere useful to go." href="/wholesale/" label="Open wholesale enquiry" />
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import ArticleSchema from "../../components/ArticleSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { bengaliPages } from "../../data/bengaliPages";
+export function getStaticPaths() { return bengaliPages.map((page) => ({ params: { slug: page.slug }, props: { page } })); }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.summary} image={page.image}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Bengali", href: "/bengali/" }, { name: page.title, href: `/bengali/${page.slug}/` }]} />
+  <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/bengali/${page.slug}/`} image={page.image} />
+  <section class="page-hero rich-hero"><div><p class="eyebrow">Bengali kitchen intent</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src={page.image} alt={`${page.title} placeholder`} /></section>
+  <section class="section grid two"><div class="card text-card"><p class="eyebrow">Local terms</p><ul>{page.terms.map((term) => <li>{term}</li>)}</ul></div><div class="card text-card"><p class="eyebrow">Suggested internal links</p><ul>{page.links.map((href) => <li><a href={href}>{href}</a></li>)}</ul></div></section>
+  <section class="section article-shell"><article class="card text-card"><h2>How to use this page</h2><p>Add real Bengali copy, recipe photos, local district proof and product shots. Keep the English title for search clarity and add Bengali phrases naturally inside the copy after review.</p></article></section>
+  <CTA title="Connect Bengali cooking to product demand." text="Use recipe photos, district links and pack-size CTAs so social traffic does not die inside Instagram or Facebook." href="/products/kacchi-ghani-mustard-oil-1l/" label="View 1 L bottle" secondaryHref="/wholesale/" secondaryLabel="Trade enquiry" />
+</BaseLayout>

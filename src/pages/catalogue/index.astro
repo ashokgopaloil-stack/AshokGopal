@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import { products } from "../../data/products";
+---
+<BaseLayout title="Product Catalogue" description="Ashok Gopal mustard oil product catalogue with retail, wholesale and institutional pack sizes.">
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Catalogue", href: "/catalogue/" }]} />
+  <section class="page-hero"><p class="eyebrow">Catalogue</p><h1>Mustard oil SKU catalogue.</h1><p class="lead">Use this page as the shareable product catalogue until the final downloadable PDF is ready.</p></section>
+  <section class="section grid products">{products.map((product) => <ProductCard product={product} />)}</section>
+</BaseLayout>

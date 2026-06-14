@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import { photoShots } from "../../data/photoPlan";
+const groups = [...new Set(photoShots.map((shot) => shot.group))];
+---
+<BaseLayout title="Photo and Asset Shot List" description="Complete photo and asset list for Ashok Gopal product, factory, trade and recipe proof." noindex={true}>
+  <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Assets Needed", href: "/assets-needed/" }]} />
+  <section class="page-hero"><p class="eyebrow">Photo sprint</p><h1>Take these photos before serious launch.</h1><p class="lead">This operational page gives exact filenames and priorities for product, factory, trade and recipe assets.</p></section>
+  {groups.map((group) => <section class="section"><div class="section-heading"><p class="eyebrow">{group}</p><h2>{group}</h2></div><div class="grid three">{photoShots.filter((shot) => shot.group === group).map((shot) => <div class="card text-card"><p class="eyebrow">{shot.priority}</p><h3>{shot.shot}</h3><p><code>{shot.filename}</code></p></div>)}</div></section>)}
+</BaseLayout>
