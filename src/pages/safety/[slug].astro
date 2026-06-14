@@ -12,7 +12,7 @@ const { page } = Astro.props;
 <BaseLayout title={page.title} description={page.summary} image={page.image}>
   <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Safety", href: "/safety/" }, { name: page.title, href: `/safety/${page.slug}/` }]} />
   <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/safety/${page.slug}/`} image={page.image} />
-  <FAQSchema slot="head" faqs={[...page.faqs]} />
+  <FAQSchema slot="head" faqs={page.faqs} />
   <section class="page-hero"><p class="eyebrow">Responsible education</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></section>
   <section class="section article-shell">{page.sections.map((section) => <article class="card text-card"><h2>{section.heading}</h2><p>{section.body}</p></article>)}</section>
   <ClaimDisclaimer />

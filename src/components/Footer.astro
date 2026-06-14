@@ -8,8 +8,11 @@ import { SITE, whatsappLink } from "../data/site";
         <img src="/logo.svg" alt="Ashok Gopal logo" />
         <span><strong>{SITE.name}</strong><small>{SITE.tagline}</small></span>
       </a>
-      <p>Manufacturing-first website for product trust, retail discovery, recipe-led brand building, and wholesale partner acquisition across West Bengal.</p>
-      <div class="social-links"><a href={SITE.social.instagram} rel="me noopener" target="_blank">Instagram</a><a href={SITE.social.facebook} rel="me noopener" target="_blank">Facebook</a></div>
+      <p>Premium, manufacturing-led mustard oil website for product trust, retail discovery, recipe-led demand, and wholesale partner acquisition across West Bengal.</p>
+      <div class="social-links">
+        <a href={SITE.social.instagram} rel="me noopener" target="_blank">Instagram</a>
+        <a href={SITE.social.facebook} rel="me noopener" target="_blank">Facebook</a>
+      </div>
     </div>
     <div>
       <h3>Products</h3>
@@ -23,18 +26,20 @@ import { SITE, whatsappLink } from "../data/site";
       <a href="/wholesale/">Wholesale enquiry</a>
       <a href="/buyers/">Buyer use cases</a>
       <a href="/districts/">District pages</a>
-      <a href="/compare/">Comparison hub</a>
+      <a href="/marketplaces/">Marketplace readiness</a>
     </div>
     <div>
-      <h3>Trust</h3>
-      <a href="/mustard-oil/">Mustard oil guide</a>
+      <h3>Proof</h3>
       <a href="/manufacturing/">Manufacturing</a>
       <a href="/quality/">Quality</a>
+      <a href="/proof/">Proof library</a>
       <a href="/contact/">Contact</a>
     </div>
   </div>
-  <div class="footer-bottom"><span>{SITE.address.street}, {SITE.address.locality}, {SITE.address.region} {SITE.address.postalCode}</span><a href={whatsappLink("I want to talk to Ashok Gopal sales.")}>{SITE.phone}</a><a href="/proof/">Proof Library</a>
-        <a href="/marketplaces/">Marketplace Readiness</a>
-        <a href="/downloads/">Downloads</a>
-        <a href="/privacy/">Privacy</a></div>
+  <div class="footer-bottom">
+    <span>{SITE.address.street}, {SITE.address.locality}, {SITE.address.region} {SITE.address.postalCode}</span>
+    <a href={whatsappLink("I want to talk to Ashok Gopal sales.")}>{SITE.phone}</a>
+    <a href="/downloads/">Downloads</a>
+    <a href="/privacy/">Privacy</a>
+  </div>
 </footer>

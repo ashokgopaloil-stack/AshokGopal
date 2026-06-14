@@ -6,7 +6,9 @@ interface Props {
 const { product } = Astro.props;
 ---
 <article class="card product-card">
-  <img src={product.image} alt={`${product.name} packaging placeholder`} loading="lazy" />
+  <a href={`/products/${product.slug}/`} aria-label={`Open ${product.name}`}>
+    <img src={product.image} alt={`${product.name} packaging placeholder`} loading="lazy" />
+  </a>
   <div class="card-body">
     <p class="eyebrow">{product.packSize}</p>
     <h3><a href={`/products/${product.slug}/`}>{product.shortName}</a></h3>

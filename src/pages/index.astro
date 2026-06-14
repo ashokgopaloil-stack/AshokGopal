@@ -8,40 +8,103 @@ import { SITE, whatsappLink } from "../data/site";
 import { coreProducts } from "../data/products";
 import { mustardOilGuides, buyerUseCases } from "../data/contentPages";
 import { districts } from "../data/districts";
-import { marketplacePages } from "../data/marketplacePages";
 import { proofPages } from "../data/proofPages";
 ---
 <BaseLayout title={SITE.name} description="Ashok Gopal kacchi ghani mustard oil for Bengali kitchens, retailers, restaurants, distributors, and wholesale buyers across West Bengal.">
   <OrganizationSchema slot="head" />
   <LocalBusinessSchema slot="head" />
+
   <section class="hero">
     <div>
       <p class="eyebrow">Kacchi ghani mustard oil · West Bengal</p>
-      <h1>Mustard oil built for Bengali kitchens and serious trade supply.</h1>
-      <p class="lead">Ashok Gopal is positioned as a manufacturing-first mustard oil brand: practical pack sizes, distributor enquiry paths, recipe-led cultural authority, and proof slots for labels, FSSAI, batches, and factory photos.</p>
-      <div class="hero-actions"><a class="button" href="/products/">View products</a><a class="button secondary" href="/wholesale/">Become a trade partner</a><a class="button ghost" href={whatsappLink("I want to enquire about Ashok Gopal mustard oil.")}>WhatsApp sales</a></div>
+      <h1>Pure mustard oil with a royal, trade-ready presence.</h1>
+      <p class="lead">Ashok Gopal now has a cleaner premium website system: product pages for pack-size demand, wholesale paths for serious buyers, proof pages for trust, and regional SEO pages for West Bengal distribution.</p>
+      <div class="hero-actions">
+        <a class="button" href="/products/">View products</a>
+        <a class="button secondary" href="/wholesale/">Wholesale enquiry</a>
+        <a class="button ghost" href={whatsappLink("I want to enquire about Ashok Gopal mustard oil.")}>WhatsApp sales</a>
+      </div>
     </div>
-    <div class="hero-visual"><img src="/placeholders/hero-product.svg" alt="Ashok Gopal mustard oil product placeholder" /><p class="floating-note">Replace this with the strongest bottle + jar + tin family photo.</p></div>
+    <div class="hero-visual">
+      <img src="/placeholders/hero-product.svg" alt="Ashok Gopal mustard oil product family placeholder" />
+      <p class="floating-note">Replace with one premium family shot: bottle, jar, tin, carton, and label facing the camera.</p>
+    </div>
   </section>
-  <section class="trust-strip">{SITE.trustBadges.map((badge) => <div><strong>{badge}</strong><span>Ready for content proof</span></div>)}</section>
-  <section class="section"><div class="section-heading split-heading"><div><p class="eyebrow">Core product pages</p><h2>Build product demand by pack size.</h2></div><a href="/products/">All products</a></div><div class="grid products">{coreProducts.slice(0,4).map((product) => <ProductCard product={product} />)}</div></section>
-  <section class="split-section amber-block"><div><p class="eyebrow">B2B funnel</p><h2>Wholesale, food-service, and distributor paths are separate.</h2><p>Commercial buyers do not all ask the same question. Restaurants care about repeat packs, distributors care about territory and rotation, retailers care about shelf movement, and institutions care about documentation.</p><div class="hero-actions"><a class="button" href="/buyers/">Buyer pages</a><a class="button secondary" href="/bulk/">Bulk packs</a></div></div><img src="/placeholders/social-distribution.svg" alt="Wholesale distribution placeholder" /></section>
-  <section class="section grid three">{buyerUseCases.slice(0,9).map((page) => <a class="card text-card" href={`/buyers/${page.slug}/`}><p class="eyebrow">Buyer page</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}</section>
-  <section class="section"><div class="section-heading split-heading"><div><p class="eyebrow">Search authority</p><h2>Mustard oil guide pages now carry the SEO breadth.</h2></div><a href="/mustard-oil/">Open guide</a></div><div class="grid three">{mustardOilGuides.slice(0,9).map((page) => <a class="card text-card" href={`/mustard-oil/${page.slug}/`}><p class="eyebrow">{page.cluster}</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}</div></section>
-  <section class="section"><div class="section-heading split-heading"><div><p class="eyebrow">Local SEO</p><h2>West Bengal district pages for trade routing.</h2></div><a href="/districts/">All districts</a></div><div class="grid three">{districts.slice(0,6).map((district) => <a class="card text-card" href={`/districts/${district.slug}/`}><h3>{district.name}</h3><p>{district.summary}</p></a>)}</div></section>
+
+  <section class="trust-strip">
+    {SITE.trustBadges.map((badge) => <div><strong>{badge}</strong><span>Launch-ready content slot</span></div>)}
+  </section>
 
   <section class="section">
-    <div class="section-heading split-heading"><div><p class="eyebrow">Proof and marketplace layer</p><h2>Now the site supports real launch operations.</h2></div><a href="/proof/">Open proof library</a></div>
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">Product catalog</p>
+        <h2>Clean product pages by pack size and buying intent.</h2>
+      </div>
+      <a href="/products/">All products</a>
+    </div>
+    <div class="grid products">{coreProducts.slice(0,4).map((product) => <ProductCard product={product} />)}</div>
+  </section>
+
+  <section class="split-section amber-block">
+    <div>
+      <p class="eyebrow">Wholesale funnel</p>
+      <h2>Separate paths for distributors, retailers, restaurants, and institutions.</h2>
+      <p>Commercial buyers need fast clarity: pack sizes, territory, documentation, MOQ, supply consistency, and who to contact. The site now routes those needs into focused pages instead of one crowded enquiry page.</p>
+      <div class="hero-actions">
+        <a class="button" href="/buyers/">Buyer pages</a>
+        <a class="button secondary" href="/bulk/">Bulk packs</a>
+      </div>
+    </div>
+    <img src="/placeholders/social-distribution.svg" alt="Premium wholesale distribution placeholder" />
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Buyer journeys</p>
+      <h2>Built for how real mustard oil buyers search and evaluate.</h2>
+    </div>
+    <div class="grid three">
+      {buyerUseCases.slice(0,6).map((page) => <a class="card text-card" href={`/buyers/${page.slug}/`}><p class="eyebrow">Buyer page</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">Search authority</p>
+        <h2>Mustard oil guides for long-term organic discovery.</h2>
+      </div>
+      <a href="/mustard-oil/">Open guide</a>
+    </div>
+    <div class="grid three">
+      {mustardOilGuides.slice(0,6).map((page) => <a class="card text-card" href={`/mustard-oil/${page.slug}/`}><p class="eyebrow">{page.cluster}</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">Local trade SEO</p>
+        <h2>District pages support distributor and retailer discovery.</h2>
+      </div>
+      <a href="/districts/">All districts</a>
+    </div>
+    <div class="grid three">{districts.slice(0,6).map((district) => <a class="card text-card" href={`/districts/${district.slug}/`}><h3>{district.name}</h3><p>{district.summary}</p></a>)}</div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">Trust layer</p>
+        <h2>Proof pages are ready for photos, labels, certificates, and batch evidence.</h2>
+      </div>
+      <a href="/proof/">Open proof library</a>
+    </div>
     <div class="grid three">
       {proofPages.slice(0,6).map((page) => <a class="card text-card" href={`/proof/${page.slug}/`}><p class="eyebrow">Proof slot</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}
     </div>
   </section>
-  <section class="section">
-    <div class="section-heading split-heading"><div><p class="eyebrow">Channel readiness</p><h2>Prepare Amazon, Flipkart, IndiaMART, GeM and WhatsApp without publishing weak data.</h2></div><a href="/marketplaces/">Marketplace pages</a></div>
-    <div class="grid three">
-      {marketplacePages.slice(0,6).map((page) => <a class="card text-card" href={`/marketplaces/${page.slug}/`}><p class="eyebrow">{page.channel}</p><h3>{page.title}</h3><p>{page.summary}</p></a>)}
-    </div>
-  </section>
 
-  <CTA title="Ready for the real assets now." text="The next unlock is product photography, pack labels, factory proof, FSSAI documents, batch-code photos, and shop-counter testimonials." href="/contact/" label="Send photos and details" />
+  <CTA title="Now add the real proof." text="The template is cleaner and premium now. The next conversion unlock is real product photography, label close-ups, FSSAI documents, batch-code photos, factory shots, and retailer/distributor proof." href="/assets-needed/" label="See assets needed" secondaryHref="/contact/" secondaryLabel="Contact sales" />
 </BaseLayout>
