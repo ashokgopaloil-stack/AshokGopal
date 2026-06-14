@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProductSchema from "../../components/ProductSchema.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { products } from "../../data/products";
+import { SITE } from "../../data/site";
+
+export function getStaticPaths() {
+  return products.map((product) => ({
+    params: { slug: product.slug },
+    props: { product }
+  }));
+}
+
+const { product } = Astro.props;
+---
+<BaseLayout
+  title={product.name}
+  description={product.summary}
+  image={product.image}
+>
+  <Fragment slot="head">
+    <ProductSchema product={product} />
+    <BreadcrumbSchema items={[
+      { name: "Home", href: "/" },
+      { name: "Products", href: "/products/" },
+      { name: product.name, href: `/products/${product.slug}/` }
+    ]} />
+  </Fragment>
+
+  <nav class="breadcrumb"><a href="/">Home</a> / <a href="/products/">Products</a> / {product.name}</nav>
+
+  <section class="product-detail">
+    <div class="panel">
+      <img src={product.image} alt={`${product.name} packaging placeholder`} />
+    </div>
+
+    <article class="panel">
+      <p class="eyebrow">{product.category}</p>
+      <h1>{product.name}</h1>
+      <p class="lead">{product.description}</p>
+
+      <table class="spec-table">
+        <tbody>
+          <tr>
+            <th>SKU</th>
+            <td>{product.sku}</td>
+          </tr>
+          <tr>
+            <th>Pack size</th>
+            <td>{product.packSize}</td>
+          </tr>
+          <tr>
+            <th>Price</th>
+            <td>{product.priceLabel}</td>
+          </tr>
+          <tr>
+            <th>Storage</th>
+            <td>{product.storage}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Best suited for</h2>
+      <ul class="check-list">
+        {product.idealFor.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h2>Product notes</h2>
+      <ul class="check-list">
+        {product.features.map((feature) => <li>{feature}</li>)}
+      </ul>
+
+      <div class="hero-actions">
+        <a class="button primary" href={`https://wa.me/${SITE.whatsapp}`}>Ask on WhatsApp</a>
+        <a class="button secondary" href="/wholesale/">Wholesale enquiry</a>
+      </div>
+    </article>
+  </section>
+
+  <CTA
+    title="Need carton, wholesale, or distributor pricing?"
+    text="Use the wholesale form and mention the SKU, pack size, district, and expected monthly volume."
+    primaryHref="/wholesale/"
+    primaryLabel="Request wholesale rate"
+    secondaryHref="/contact/"
+    secondaryLabel="Contact sales"
+  />
+</BaseLayout>

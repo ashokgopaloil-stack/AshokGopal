@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+---
+<BaseLayout
+  title="About Ashok Gopal"
+  description="About Ashok Gopal, a mustard oil manufacturing and supply brand built around traditional taste, regional trust, and wholesale distribution."
+>
+  <Fragment slot="head">
+    <BreadcrumbSchema items={[
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about/" }
+    ]} />
+  </Fragment>
+
+  <nav class="breadcrumb"><a href="/">Home</a> / About</nav>
+
+  <section class="page-hero">
+    <p class="eyebrow">About the brand</p>
+    <h1>A regional mustard oil brand should feel specific and real.</h1>
+    <p>
+      This page is prepared for the family story, manufacturing history, founder details, and the reason Ashok Gopal exists.
+      Add real photos and verified company history when ready.
+    </p>
+  </section>
+
+  <section class="split-section">
+    <div class="panel">
+      <img src="/placeholders/founder-story.svg" alt="Founder or family story photo placeholder" />
+    </div>
+    <div class="panel accent">
+      <h2>Content to add</h2>
+      <ul class="check-list">
+        <li>Founder or family story.</li>
+        <li>Why mustard oil and Bengali kitchens are central to the brand.</li>
+        <li>Manufacturing location and production discipline.</li>
+        <li>Retail and distributor network vision.</li>
+        <li>Actual photos of people, factory, and packaging.</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

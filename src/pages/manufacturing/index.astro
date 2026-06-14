@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+---
+<BaseLayout
+  title="Manufacturing Process"
+  description="See the Ashok Gopal mustard oil manufacturing story: seed selection, kacchi ghani pressing, filtration, packing, and batch handling."
+>
+  <Fragment slot="head">
+    <BreadcrumbSchema items={[
+      { name: "Home", href: "/" },
+      { name: "Manufacturing", href: "/manufacturing/" }
+    ]} />
+  </Fragment>
+
+  <nav class="breadcrumb"><a href="/">Home</a> / Manufacturing</nav>
+
+  <section class="page-hero">
+    <p class="eyebrow">Manufacturing</p>
+    <h1>Make the production process visible.</h1>
+    <p>
+      This page should become the proof layer for your edible-oil manufacturing setup.
+      Replace placeholders with real factory, seed, press, filtration, packing, and dispatch photos.
+    </p>
+  </section>
+
+  <section class="split-section">
+    <div class="panel">
+      <img src="/placeholders/factory.svg" alt="Factory and manufacturing unit photo placeholder" />
+    </div>
+
+    <div class="grid two">
+      <article class="process-card">
+        <p class="eyebrow">Step 01</p>
+        <h3>Seed selection</h3>
+        <p>Explain sourcing standards, sorting, and why mustard-seed quality affects aroma and taste.</p>
+      </article>
+      <article class="process-card">
+        <p class="eyebrow">Step 02</p>
+        <h3>Kacchi ghani pressing</h3>
+        <p>Describe the traditional pressing positioning and the focus on preserving mustard character.</p>
+      </article>
+      <article class="process-card">
+        <p class="eyebrow">Step 03</p>
+        <h3>Filtration</h3>
+        <p>Show how oil is clarified and handled before packing. Add actual process photos later.</p>
+      </article>
+      <article class="process-card">
+        <p class="eyebrow">Step 04</p>
+        <h3>Packing and dispatch</h3>
+        <p>Use packaging line, carton, jar, bottle, and tin images to build distributor confidence.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="panel accent">
+      <p class="eyebrow">Photo checklist</p>
+      <h2>Photos to collect before launch</h2>
+      <ul class="check-list">
+        <li>Factory front and name board.</li>
+        <li>Mustard seeds close-up.</li>
+        <li>Pressing / production setup.</li>
+        <li>Oil filtration and storage area.</li>
+        <li>Packaging line with bottles, jars, and tins.</li>
+        <li>Carton stack, dispatch, and vehicle loading.</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

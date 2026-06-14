@@ -1,0 +1,43 @@
+---
+import { NAV_ITEMS, SITE } from "../data/site";
+---
+<footer class="site-footer">
+  <div class="footer-grid">
+    <section>
+      <img src={SITE.logo} alt="" width="48" height="48" />
+      <h2>Ashok Gopal</h2>
+      <p>Kacchi ghani mustard oil for Bengali kitchens, retailers, restaurants, and wholesale distribution.</p>
+    </section>
+
+    <section>
+      <h3>Explore</h3>
+      <ul>
+        {NAV_ITEMS.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </section>
+
+    <section>
+      <h3>Sales</h3>
+      <ul>
+        <li><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>
+        <li><a href={`https://wa.me/${SITE.whatsapp}`}>WhatsApp sales</a></li>
+        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Social</h3>
+      <ul>
+        <li><a href={SITE.instagram}>Instagram</a></li>
+        <li><a href={SITE.facebook}>Facebook</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© {new Date().getFullYear()} Ashok Gopal. All rights reserved.</p>
+    <p>Replace placeholder product and factory images before public launch.</p>
+  </div>
+</footer>

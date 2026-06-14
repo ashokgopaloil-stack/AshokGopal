@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import OrganizationSchema from "../components/OrganizationSchema.astro";
+import LocalBusinessSchema from "../components/LocalBusinessSchema.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import ProductCard from "../components/ProductCard.astro";
+import CTA from "../components/CTA.astro";
+import { products } from "../data/products";
+import { SITE } from "../data/site";
+---
+<BaseLayout
+  title="Kacchi Ghani Mustard Oil Manufacturer in West Bengal"
+  description="Ashok Gopal makes kacchi ghani mustard oil for Bengali kitchens, retail counters, restaurants, and wholesale distribution across West Bengal."
+>
+  <Fragment slot="head">
+    <OrganizationSchema />
+    <LocalBusinessSchema />
+  </Fragment>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Manufactured for Bengali kitchens</p>
+      <h1>Kacchi ghani mustard oil with real jhajh.</h1>
+      <p class="lead">
+        Ashok Gopal is built around the familiar sharp aroma, pungency, and cooking character expected from traditional mustard oil.
+        The site is structured for household buyers, retailers, restaurants, and distributors.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="/products/">View products</a>
+        <a class="button secondary" href="/wholesale/">Become a distributor</a>
+      </div>
+      <div class="trust-strip" aria-label="Brand trust points">
+        <span>Kacchi ghani positioning</span>
+        <span>FSSAI-ready trust layer</span>
+        <span>Retail + B2B packs</span>
+        <span>Bengali cooking fit</span>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img src="/placeholders/hero-product.svg" alt="Ashok Gopal mustard oil product photography placeholder" />
+    </div>
+  </section>
+
+  <section class="section">
+    <SectionHeader
+      eyebrow="Product catalog"
+      title="Mustard oil packs for homes, retail shelves, and wholesale buyers"
+      text="Start with core kacchi ghani mustard oil SKUs. Add final packaging images, MRP, carton quantity, and batch information once available."
+    />
+    <div class="grid products">
+      {products.map((product) => <ProductCard product={product} />)}
+    </div>
+  </section>
+
+  <section class="split-section">
+    <div class="panel accent">
+      <p class="eyebrow">Manufacturing proof</p>
+      <h2>Show the factory, not only the bottle.</h2>
+      <p>
+        For edible oil, buyers need manufacturing confidence: seed selection, pressing, filtration, packing hygiene, batch discipline, and clear contactability.
+      </p>
+      <ul class="check-list">
+        <li>Factory and packing-line photo placeholders are already allocated.</li>
+        <li>Quality and certification pages are separated for trust-building.</li>
+        <li>Wholesale buyers get a structured application flow instead of a generic contact form.</li>
+      </ul>
+    </div>
+
+    <div class="grid two">
+      <article class="proof-card">
+        <h3>Traditional taste</h3>
+        <p>Copy is tuned around aroma, pungency, and Bengali cooking use cases without making unsupported medical claims.</p>
+      </article>
+      <article class="proof-card">
+        <h3>Product hierarchy</h3>
+        <p>Each pack has its own clean URL, SKU field, schema, and future room for pricing and cartons.</p>
+      </article>
+      <article class="proof-card">
+        <h3>Distributor acquisition</h3>
+        <p>Wholesale forms collect GSTIN, FSSAI, territory, infrastructure, and monthly volume signals.</p>
+      </article>
+      <article class="proof-card">
+        <h3>Social bridge</h3>
+        <p>Instagram and Facebook links are wired in, with placeholders for recipe posts and packaging photos.</p>
+      </article>
+    </div>
+  </section>
+
+  <CTA
+    title="Open wholesale and distributor enquiries with better qualification."
+    text="Collect the details a manufacturing brand actually needs: GSTIN, FSSAI license, warehouse capacity, vehicle access, districts, and expected monthly volume."
+    primaryHref="/wholesale/"
+    primaryLabel="Apply for wholesale"
+    secondaryHref={`https://wa.me/${SITE.whatsapp}`}
+    secondaryLabel="WhatsApp sales"
+  />
+
+  <section class="section">
+    <SectionHeader
+      eyebrow="Social and recipes"
+      title="Use Instagram and Facebook as demand engines, not isolated pages"
+      text="Recipe reels, product photos, shop-counter posts, and cooking content should drive users back to dedicated website pages."
+    />
+    <div class="grid three">
+      <article class="article-card">
+        <img src="/placeholders/social-recipe.svg" alt="Recipe social post placeholder" />
+        <h3>Recipe video landing pages</h3>
+        <p>Create a page for each high-performing reel: shorshe fish, begun bhaja, posto, pickles, and festive cooking.</p>
+      </article>
+      <article class="article-card">
+        <img src="/placeholders/social-packaging.svg" alt="Product packaging social post placeholder" />
+        <h3>Packaging trust posts</h3>
+        <p>Use bottle, jar, carton, and tin visuals to make the product range visible before ecommerce is added.</p>
+      </article>
+      <article class="article-card">
+        <img src="/placeholders/social-distribution.svg" alt="Distribution social post placeholder" />
+        <h3>Retailer and distributor proof</h3>
+        <p>Add store shelves, distributor counters, delivery photos, and wholesale CTAs as the network expands.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

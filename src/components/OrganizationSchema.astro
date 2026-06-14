@@ -1,0 +1,23 @@
+---
+import JsonLd from "./JsonLd.astro";
+import { SITE } from "../data/site";
+
+const data = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE.url}/#organization`,
+  name: SITE.legalName,
+  alternateName: ["Ashok Gopal", "Gopal Mustard Oil", "Gopal Kacchi Ghani"],
+  url: SITE.url,
+  logo: new URL(SITE.logo, SITE.url).toString(),
+  sameAs: [SITE.facebook, SITE.instagram],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: SITE.phone,
+    contactType: "sales",
+    areaServed: "IN",
+    availableLanguage: SITE.languages
+  }
+};
+---
+<JsonLd data={data} />

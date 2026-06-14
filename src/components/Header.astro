@@ -1,0 +1,20 @@
+---
+import { NAV_ITEMS, SITE } from "../data/site";
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Ashok Gopal home">
+    <img src={SITE.logo} alt="" width="44" height="44" />
+    <span>
+      <strong>Ashok Gopal</strong>
+      <small>Kacchi Ghani Mustard Oil</small>
+    </span>
+  </a>
+
+  <nav aria-label="Primary navigation">
+    {NAV_ITEMS.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+
+  <a class="header-cta" href="/wholesale/">Wholesale Enquiry</a>
+</header>

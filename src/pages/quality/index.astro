@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+---
+<BaseLayout
+  title="Quality, Certification, and Food Safety"
+  description="Ashok Gopal quality page for FSSAI details, vitamin enrichment notes, batch discipline, lab reports, and edible-oil safety documentation."
+>
+  <Fragment slot="head">
+    <BreadcrumbSchema items={[
+      { name: "Home", href: "/" },
+      { name: "Quality", href: "/quality/" }
+    ]} />
+  </Fragment>
+
+  <nav class="breadcrumb"><a href="/">Home</a> / Quality</nav>
+
+  <section class="page-hero">
+    <p class="eyebrow">Quality and trust</p>
+    <h1>Turn compliance into buyer confidence.</h1>
+    <p>
+      Edible-oil buyers need proof, not vague claims. Use this page for FSSAI details, batch checks,
+      vitamin enrichment notes, storage discipline, and downloadable documents.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="grid three">
+      <article class="requirement-card">
+        <h3>FSSAI license</h3>
+        <p>Add verified FSSAI number, license image, validity, and issuing authority before launch.</p>
+      </article>
+      <article class="requirement-card">
+        <h3>Vitamin enrichment</h3>
+        <p>Use precise label copy for Vitamins A, D2, and E only after confirming packaging and compliance wording.</p>
+      </article>
+      <article class="requirement-card">
+        <h3>Batch discipline</h3>
+        <p>Explain batch coding, packing dates, storage, and recall/contact procedure in simple language.</p>
+      </article>
+      <article class="requirement-card">
+        <h3>Lab reports</h3>
+        <p>Create PDF slots for reports such as moisture, FFA, adulteration checks, and other relevant tests.</p>
+      </article>
+      <article class="requirement-card">
+        <h3>Packaging checks</h3>
+        <p>Show sealed cap, label, SKU, carton, and storage instructions on product pages.</p>
+      </article>
+      <article class="requirement-card">
+        <h3>Distributor trust</h3>
+        <p>Add trade certificates, GST details, and customer-support contact details for bulk buyers.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="panel accent">
+      <p class="eyebrow">Do not overclaim</p>
+      <h2>Use restrained, verifiable health copy.</h2>
+      <p>
+        Keep health messaging factual and label-backed. Avoid disease-cure claims. Focus on traditional taste,
+        culinary use, quality process, and verified regulatory information.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

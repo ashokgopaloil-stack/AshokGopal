@@ -1,0 +1,38 @@
+---
+import JsonLd from "./JsonLd.astro";
+import { SITE } from "../data/site";
+import type { Product } from "../data/products";
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+const data = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: product.name,
+  image: new URL(product.image, SITE.url).toString(),
+  description: product.summary,
+  sku: product.sku,
+  mpn: product.sku,
+  brand: {
+    "@type": "Brand",
+    name: SITE.name
+  },
+  category: product.category,
+  offers: {
+    "@type": "Offer",
+    url: `${SITE.url}/products/${product.slug}/`,
+    priceCurrency: "INR",
+    price: product.schemaPrice,
+    availability: product.availability,
+    itemCondition: "https://schema.org/NewCondition",
+    seller: {
+      "@type": "Organization",
+      name: SITE.legalName
+    }
+  }
+};
+---
+<JsonLd data={data} />

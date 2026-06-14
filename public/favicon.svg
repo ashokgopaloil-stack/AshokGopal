@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ashok Gopal logo placeholder">
+  <rect width="120" height="120" rx="28" fill="#672f02"/>
+  <circle cx="60" cy="60" r="38" fill="#f5b51b"/>
+  <path d="M37 75c13-42 36-42 46 0-17-10-31-10-46 0Z" fill="#426b2c"/>
+  <text x="60" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#672f02">AG</text>
+</svg>

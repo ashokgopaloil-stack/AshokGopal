@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../data/site";
+---
+<BaseLayout
+  title="Wholesale and Distributor Enquiry"
+  description="Apply for Ashok Gopal mustard oil wholesale supply, retail distribution, super stockist, restaurant, or institutional purchase enquiries."
+>
+  <Fragment slot="head">
+    <BreadcrumbSchema items={[
+      { name: "Home", href: "/" },
+      { name: "Wholesale", href: "/wholesale/" }
+    ]} />
+  </Fragment>
+
+  <nav class="breadcrumb"><a href="/">Home</a> / Wholesale</nav>
+
+  <section class="page-hero">
+    <p class="eyebrow">B2B supply</p>
+    <h1>Wholesale enquiries should qualify serious buyers.</h1>
+    <p>
+      This page is built for distributors, super stockists, retailers, restaurants, caterers, and institutional buyers.
+      The form captures the operational details needed to judge territory fit and supply readiness.
+    </p>
+  </section>
+
+  <section class="form-shell">
+    <aside class="panel accent">
+      <h2>Who should apply?</h2>
+      <ul class="check-list">
+        <li>Distributors and super stockists in West Bengal.</li>
+        <li>Retailers and grocery counters looking for regular supply.</li>
+        <li>Restaurants, caterers, and institutional kitchens.</li>
+        <li>Existing edible-oil trade businesses with GST/FSSAI details.</li>
+      </ul>
+
+      <h2>Before submission</h2>
+      <p>
+        Keep GSTIN, FSSAI license, target districts, monthly volume, and warehouse details ready.
+        You can also message sales directly on WhatsApp.
+      </p>
+      <a class="button primary" href={`https://wa.me/${SITE.whatsapp}`}>WhatsApp sales</a>
+    </aside>
+
+    <div class="panel">
+      <form name="wholesale-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="wholesale-enquiry" />
+        <p hidden>
+          <label>Do not fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-grid">
+          <label>
+            Firm legal name
+            <input name="firm_legal_name" autocomplete="organization" required />
+          </label>
+
+          <label>
+            Contact person
+            <input name="contact_person" autocomplete="name" required />
+          </label>
+
+          <label>
+            Mobile / WhatsApp
+            <input name="mobile" autocomplete="tel" required />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" />
+          </label>
+
+          <label>
+            GSTIN
+            <input name="gstin_number" minlength="15" maxlength="15" placeholder="15-character GSTIN" />
+          </label>
+
+          <label>
+            FSSAI license
+            <input name="fssai_license" />
+          </label>
+
+          <label>
+            Business type
+            <select name="business_type" required>
+              <option value="">Select</option>
+              <option>Distributor</option>
+              <option>Super stockist</option>
+              <option>Retailer</option>
+              <option>Restaurant / HoReCa</option>
+              <option>Caterer</option>
+              <option>Institutional buyer</option>
+            </select>
+          </label>
+
+          <label>
+            Target district
+            <input name="target_districts" placeholder="Kolkata, Howrah, Hooghly..." required />
+          </label>
+
+          <label>
+            Expected monthly volume
+            <select name="monthly_volume">
+              <option value="">Select</option>
+              <option>Below 100 litres</option>
+              <option>100 - 500 litres</option>
+              <option>500 - 2,000 litres</option>
+              <option>2,000+ litres</option>
+            </select>
+          </label>
+
+          <label>
+            Warehouse capacity
+            <input name="warehouse_size" placeholder="Approx. sq ft or storage capacity" />
+          </label>
+
+          <label>
+            Delivery vehicles
+            <select name="delivery_vehicles">
+              <option value="">Select</option>
+              <option>Own delivery vehicle</option>
+              <option>Rented logistics</option>
+              <option>No vehicle currently</option>
+            </select>
+          </label>
+
+          <label>
+            Current oil brands handled
+            <input name="current_brands" />
+          </label>
+
+          <label class="full">
+            Requirement details
+            <textarea name="message" placeholder="Mention SKU, pack size, city/district, current business, and expected order size."></textarea>
+          </label>
+        </div>
+
+        <button class="button primary" type="submit">Submit wholesale enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <CTA
+    title="The wholesale page is ready for lead capture."
+    text="Once you finalize exact prices, carton quantities, and territory policies, add them here as downloadable trade sheets."
+    primaryHref="/products/"
+    primaryLabel="See product SKUs"
+    secondaryHref="/contact/"
+    secondaryLabel="Contact office"
+  />
+</BaseLayout>

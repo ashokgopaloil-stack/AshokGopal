@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Hero Product Photo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff2cc"/>
+      <stop offset="1" stop-color="#fffaf0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#g)"/>
+  <circle cx="980" cy="140" r="150" fill="#f5b51b" opacity="0.45"/>
+  <circle cx="150" cy="710" r="220" fill="#426b2c" opacity="0.12"/>
+  <rect x="120" y="140" width="960" height="520" rx="42" fill="#ffffff" opacity="0.72" stroke="#ead8ad" stroke-width="4"/>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#9b4d08">Hero Product Photo</text>
+  <text x="600" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#6c5b45">Bottle, jar and tin group shot</text>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#426b2c">Replace with real Ashok Gopal photo</text>
+</svg>
