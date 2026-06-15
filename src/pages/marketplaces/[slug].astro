@@ -11,10 +11,10 @@ export function getStaticPaths() {
 }
 const { page } = Astro.props;
 ---
-<BaseLayout title={page.title} description={page.summary} image="/placeholders/social-packaging.svg">
+<BaseLayout title={page.title} description={page.summary} image="/placeholders/social-packaging.png">
   <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Marketplaces", href: "/marketplaces/" }, { name: page.title, href: `/marketplaces/${page.slug}/` }]} />
-  <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/marketplaces/${page.slug}/`} image="/placeholders/social-packaging.svg" />
-  <section class="page-hero rich-hero"><div><p class="eyebrow">{page.channel} · {page.intent}</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src="/placeholders/social-packaging.svg" alt={`${page.title} placeholder`} /></section>
+  <ArticleSchema slot="head" title={page.title} description={page.summary} path={`/marketplaces/${page.slug}/`} image="/placeholders/social-packaging.png" />
+  <section class="page-hero rich-hero"><div><p class="eyebrow">{page.channel} · {page.intent}</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src="/placeholders/social-packaging.png" alt={`${page.title} placeholder`} /></section>
   <section class="section grid two">
     <MarketplaceChecklist requirements={page.requirements} />
     <div class="card text-card"><p class="eyebrow">Content angles</p><ul>{page.contentAngles.map((angle) => <li>{angle}</li>)}</ul></div>

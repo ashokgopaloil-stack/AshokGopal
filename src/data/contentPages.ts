@@ -45,7 +45,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Learn the basic types, kitchen uses, and buyer considerations around mustard oil.",
     "cluster": "Awareness",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -82,7 +82,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Plain-language explanation of the term customers see on mustard oil packs.",
     "cluster": "Education",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -119,7 +119,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Comparison page for common production terms buyers search before purchase.",
     "cluster": "Comparison",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -156,7 +156,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Explains how buyers compare traditional process terms without overclaiming.",
     "cluster": "Comparison",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -193,7 +193,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Helps shoppers understand common label terms and what to verify on pack.",
     "cluster": "Comparison",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -230,7 +230,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "A buyer guide for seed-type comparison and Bengali cooking expectations.",
     "cluster": "Comparison",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -267,7 +267,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "A sensory SEO page around sharp aroma, pungency, and regional taste language.",
     "cluster": "Taste",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -304,7 +304,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Safe, careful guide to where mustard oil is commonly used in Indian kitchens.",
     "cluster": "Cooking",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -341,7 +341,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Balanced educational page that avoids medical promises and points users to local regulations and labels.",
     "cluster": "Safety",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -378,7 +378,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Careful explainer for customers who read international discussions and want context.",
     "cluster": "Safety",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -415,7 +415,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Explains the pungent sensory character associated with mustard oil in non-medical language.",
     "cluster": "Taste",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -452,7 +452,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Trust page explaining sealed packs, batch code, MRP, and purchase proof.",
     "cluster": "Trust",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -489,7 +489,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Explains pack information: FSSAI number, batch code, MRP, net quantity, and storage.",
     "cluster": "Trust",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -526,7 +526,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Explains why food-safety licence details and label consistency matter.",
     "cluster": "Compliance",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -563,7 +563,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Traceability explainer for retail and wholesale buyers.",
     "cluster": "Compliance",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -600,7 +600,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Simple household storage and usage guidance.",
     "cluster": "Usage",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -637,7 +637,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Retail handling guidance for cartons, shelves, sun exposure, and stock rotation.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -674,7 +674,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Culinary authority page linking product SKUs with Bengali recipes and seasonal use.",
     "cluster": "Culture",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -711,7 +711,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Use-case page for fish frying, marinade, and Bengali curry content.",
     "cluster": "Cooking",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -748,7 +748,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Explains why pickle makers ask for mustard oil and what pack sizes they may need.",
     "cluster": "Cooking",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -785,7 +785,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Use-case page for frying vegetables, fish, and snacks with careful copy.",
     "cluster": "Cooking",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -822,7 +822,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Search page for marinades, fish preparation, and kitchen aroma.",
     "cluster": "Cooking",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -859,7 +859,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "A safer myth/fact hub inspired by category search demand, with claims kept conservative.",
     "cluster": "FAQ",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -896,7 +896,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Trust-building page explaining that product claims should match labels and documents.",
     "cluster": "Trust",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -933,7 +933,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Explains enrichment language only when backed by pack labels and documents.",
     "cluster": "Label",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -970,7 +970,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Trade and consumer explainer covering pack size, seed cost, logistics, and market movement.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1007,7 +1007,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "B2B guide for distributors, restaurants, and retailers comparing SKUs and documentation.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1044,7 +1044,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Commercial explainer around volume, rotation, territory, and reorder discipline.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1081,7 +1081,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Explains why commercial buyers search both kg and litre formats and should confirm SKU basis.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1118,7 +1118,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Prepares the site for carton count, case weight, and distributor planning.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1155,7 +1155,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Buyer checklist: taste, pack, label, batch, size, and intended use.",
     "cluster": "Buying",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1192,7 +1192,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Non-claimy buyer guide focused on fit rather than unverifiable superiority.",
     "cluster": "Buying",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1229,7 +1229,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Retailer-specific guide for stocking bottle, jar, and tin formats.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1266,7 +1266,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Food-service guide linked to 5 litre, 15 litre, and 15 kg pages.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1303,7 +1303,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Procurement guide for canteens, hostels, factories, and institutional kitchens.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1340,7 +1340,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Street-snack use case page with aroma-led copy and bulk enquiry path.",
     "cluster": "Culture",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1377,7 +1377,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Use-case page for event, puja, and community cooking supply enquiries.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1414,7 +1414,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Brand authority page for recipes, nostalgia, and regional search.",
     "cluster": "Culture",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1451,7 +1451,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Internal-facing public page for recipe reels, packaging photos, and retailer proof posts.",
     "cluster": "Marketing",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1488,7 +1488,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Buyer checklist tying together label, seal, storage, batch code, and invoice.",
     "cluster": "Trust",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1525,7 +1525,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Regional-trust page for West Bengal buyers comparing national brands and local supply.",
     "cluster": "Trust",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1562,7 +1562,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Statewide trade guide linking district pages and wholesale form.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
@@ -1599,7 +1599,7 @@ export const mustardOilGuides: ArticlePage[] = [
     "summary": "Long-tail FAQ hub for common search questions and internal links.",
     "cluster": "FAQ",
     "intent": "Informational",
-    "image": "/placeholders/social-preview.svg",
+    "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",

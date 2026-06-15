@@ -9,7 +9,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/factory.svg"
+    "image": "/placeholders/factory.png"
   },
   {
     "slug": "seed-intake-and-cleaning",
@@ -21,7 +21,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "pressing-process-gallery",
@@ -33,7 +33,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/factory.svg"
+    "image": "/placeholders/factory.png"
   },
   {
     "slug": "filtration-and-settling-photos",
@@ -45,7 +45,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "bottle-filling-and-capping",
@@ -57,7 +57,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "jar-and-tin-packing",
@@ -69,7 +69,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "batch-code-and-mrp-panel",
@@ -81,7 +81,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "carton-and-case-pack-proof",
@@ -93,7 +93,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "warehouse-stack-and-dispatch",
@@ -105,7 +105,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "delivery-vehicle-loading",
@@ -117,7 +117,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "retail-shelf-proof",
@@ -129,7 +129,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "restaurant-bulk-use-proof",
@@ -141,7 +141,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "distributor-godown-proof",
@@ -153,7 +153,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "shopkeeper-testimonials",
@@ -165,7 +165,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "fssai-certificate-slot",
@@ -177,7 +177,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "lab-report-slot",
@@ -189,7 +189,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "gst-and-business-documents",
@@ -201,7 +201,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "vitamin-enrichment-proof",
@@ -213,7 +213,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "festival-stock-movement",
@@ -225,7 +225,7 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   },
   {
     "slug": "customer-recipe-proof",
@@ -237,6 +237,6 @@ export const proofPages = [
       "Link to relevant product or wholesale page",
       "Keep claims limited to what the proof shows"
     ],
-    "image": "/placeholders/social-packaging.svg"
+    "image": "/placeholders/social-packaging.png"
   }
 ] as const;

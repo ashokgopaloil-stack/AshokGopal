@@ -42,6 +42,9 @@ const faqs = [
       <h1>{product.name}</h1>
       <p class="lead">{product.summary}</p>
       <p>{product.description}</p>
+      {product.verboseDescription && (
+        <div class="verbose-description-block" set:html={product.verboseDescription} />
+      )}
       <div class="price-box">
         <strong>{product.priceLabel}</strong>
         <span>SKU: {product.sku}</span>

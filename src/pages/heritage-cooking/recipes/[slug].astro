@@ -30,11 +30,45 @@ const faqs = [
       <div class="tag-row">{recipe.keywords.map((keyword) => <span>{keyword}</span>)}</div>
     </div>
   </section>
-  <section class="section amber-block">
-    <p class="eyebrow">Draft cooking flow</p>
-    <h2>Recipe structure to complete later</h2>
-    <ol>{recipe.steps.map((step) => <li>{step}</li>)}</ol>
+  {recipe.history && (
+    <section class="section">
+      <div class="card text-card" style="padding: 2.5rem; background: var(--surface);">
+        <p class="eyebrow">Culinary Heritage & Context</p>
+        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin: 0 0 1rem; color: var(--brand-dark);">The Story Behind the Recipe</h2>
+        <p class="lead" style="font-size: 1.1rem; line-height: 1.7; color: var(--muted); margin: 0;">{recipe.history}</p>
+      </div>
+    </section>
+  )}
+
+  <section class="split-section" style="align-items: start; gap: 3rem; padding-block: 2rem;">
+    <div class="card text-card" style="padding: 2rem; background: var(--surface);">
+      <p class="eyebrow">Ingredients Checklist</p>
+      <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0 0 1.5rem; color: var(--brand-dark);">What You Need</h2>
+      {recipe.ingredients ? (
+        <ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.8; color: var(--ink);">
+          {recipe.ingredients.map((ing) => <li>{ing}</li>)}
+        </ul>
+      ) : (
+        <p style="color: var(--muted);">Ingredients quantities to be finalized soon.</p>
+      )}
+    </div>
+    
+    <div class="card text-card" style="padding: 2rem; background: var(--surface);">
+      <p class="eyebrow">Preparation & Cooking Steps</p>
+      <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0 0 1.5rem; color: var(--brand-dark);">Step-by-Step Directions</h2>
+      <ol style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.8; color: var(--ink);">
+        {recipe.steps.map((step) => <li style="margin-bottom: 0.8rem;">{step}</li>)}
+      </ol>
+    </div>
   </section>
+
+  {recipe.chefTip && (
+    <section class="section claim-disclaimer" style="margin-block: 1rem;">
+      <p class="eyebrow">Kacchi Ghani Chef's Secret</p>
+      <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin: 0 0 0.5rem; color: var(--brand-dark);">Mastering Mustard Oil Heat</h3>
+      <p style="font-size: 1rem; line-height: 1.6; color: var(--ink); margin: 0;">{recipe.chefTip}</p>
+    </section>
+  )}
   <section class="faq-block section">
     <h2>Recipe page notes</h2>
     {faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}

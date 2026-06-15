@@ -17,7 +17,7 @@ const { page } = Astro.props;
       <h1>{page.title}</h1>
       <p class="lead">{page.description}</p>
     </div>
-    <img src="/placeholders/factory.svg" alt="Factory placeholder" />
+    <img src="/placeholders/factory.png" alt="Factory placeholder" />
   </section>
   <section class="grid three section">
     {page.bullets.map((bullet) => <div class="card text-card"><h3>{bullet}</h3><p>Add real operational details, photos, and document proof for this point before launch.</p></div>)}
@@ -28,7 +28,7 @@ const { page } = Astro.props;
       <h2>Images needed for this page</h2>
       <ul><li>Factory or machine photo</li><li>Close-up process photo</li><li>Worker/safety/process discipline photo</li><li>Finished goods or dispatch photo</li></ul>
     </div>
-    <img src="/placeholders/social-packaging.svg" alt="Manufacturing proof placeholder" loading="lazy" />
+    <img src="/placeholders/social-packaging.png" alt="Manufacturing proof placeholder" loading="lazy" />
   </section>
   <CTA href="/products/" label={page.cta} />
 </BaseLayout>

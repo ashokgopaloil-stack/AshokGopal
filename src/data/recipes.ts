@@ -10,6 +10,9 @@ export type Recipe = {
   cookTime: string;
   yield: string;
   steps: string[];
+  history?: string;
+  ingredients?: string[];
+  chefTip?: string;
 };
 
 export const recipes: Recipe[] = [
@@ -17,7 +20,7 @@ export const recipes: Recipe[] = [
     "slug": "begun-bhaja",
     "title": "Begun Bhaja with Mustard Oil",
     "summary": "SEO-ready recipe page connecting begun bhaja with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-begun.svg",
+    "image": "/placeholders/recipe-begun.png",
     "category": "Vegetarian cooking",
     "cookingUse": "Frying and aroma base",
     "keywords": [
@@ -39,7 +42,7 @@ export const recipes: Recipe[] = [
     "slug": "shorshe-ilish",
     "title": "Shorshe Ilish with Mustard Oil",
     "summary": "SEO-ready recipe page connecting shorshe ilish with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-fish.svg",
+    "image": "/placeholders/recipe-fish.png",
     "category": "Fish curry",
     "cookingUse": "Marination and final aroma",
     "keywords": [
@@ -61,7 +64,7 @@ export const recipes: Recipe[] = [
     "slug": "jhalmuri-mustard-oil",
     "title": "Jhalmuri with Mustard Oil",
     "summary": "SEO-ready recipe page connecting jhalmuri with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Snack",
     "cookingUse": "Raw aroma drizzle",
     "keywords": [
@@ -83,7 +86,7 @@ export const recipes: Recipe[] = [
     "slug": "aam-tel-mango-pickle",
     "title": "Aam Tel Mango Pickle",
     "summary": "SEO-ready recipe page connecting aam tel mango pickle with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-pickle.svg",
+    "image": "/placeholders/recipe-pickle.png",
     "category": "Pickle",
     "cookingUse": "Pickling medium and flavour carrier",
     "keywords": [
@@ -105,7 +108,7 @@ export const recipes: Recipe[] = [
     "slug": "panch-phoron-sabzi",
     "title": "Panch Phoron Sabzi",
     "summary": "SEO-ready recipe page connecting panch phoron sabzi with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Vegetarian cooking",
     "cookingUse": "Tempering and everyday cooking",
     "keywords": [
@@ -127,7 +130,7 @@ export const recipes: Recipe[] = [
     "slug": "alu-posto-with-mustard-oil",
     "title": "Alu Posto with Mustard Oil",
     "summary": "SEO-ready recipe page connecting alu posto with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Bengali lunch",
     "cookingUse": "Base cooking oil and aroma",
     "keywords": [
@@ -149,7 +152,7 @@ export const recipes: Recipe[] = [
     "slug": "kosha-mangsho-mustard-oil-base",
     "title": "Kosha Mangsho Mustard Oil Base",
     "summary": "SEO-ready recipe page connecting kosha mangsho mustard oil base with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Festive cooking",
     "cookingUse": "Browning and spice base",
     "keywords": [
@@ -171,7 +174,7 @@ export const recipes: Recipe[] = [
     "slug": "muri-mustard-oil-snack",
     "title": "Muri with Mustard Oil and Green Chilli",
     "summary": "SEO-ready recipe page connecting muri with mustard oil and green chilli with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Snack",
     "cookingUse": "Raw aroma drizzle",
     "keywords": [
@@ -193,7 +196,7 @@ export const recipes: Recipe[] = [
     "slug": "ilish-marinade-mustard-oil",
     "title": "Ilish Marinade with Mustard Oil",
     "summary": "SEO-ready recipe page connecting ilish marinade with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-fish.svg",
+    "image": "/placeholders/recipe-fish.png",
     "category": "Fish marinade",
     "cookingUse": "Marination and final aroma",
     "keywords": [
@@ -215,7 +218,7 @@ export const recipes: Recipe[] = [
     "slug": "shukto-tempering",
     "title": "Shukto Tempering with Mustard Oil",
     "summary": "SEO-ready recipe page connecting shukto tempering with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Bengali lunch",
     "cookingUse": "Light tempering and bitter-vegetable balance",
     "keywords": [
@@ -237,7 +240,7 @@ export const recipes: Recipe[] = [
     "slug": "macher-jhol-mustard-oil",
     "title": "Macher Jhol with Mustard Oil",
     "summary": "SEO-ready recipe page connecting macher jhol with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-fish.svg",
+    "image": "/placeholders/recipe-fish.png",
     "category": "Fish curry",
     "cookingUse": "Fish frying and gravy base",
     "keywords": [
@@ -259,7 +262,7 @@ export const recipes: Recipe[] = [
     "slug": "rui-kalia",
     "title": "Rui Kalia Mustard Oil Base",
     "summary": "SEO-ready recipe page connecting rui kalia mustard oil base with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-fish.svg",
+    "image": "/placeholders/recipe-fish.png",
     "category": "Fish curry",
     "cookingUse": "Fish frying and rich masala base",
     "keywords": [
@@ -281,7 +284,7 @@ export const recipes: Recipe[] = [
     "slug": "chingri-malai-prep-note",
     "title": "Chingri Prep with Mustard Oil Note",
     "summary": "SEO-ready recipe page connecting chingri prep with mustard oil note with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Seafood",
     "cookingUse": "Initial aroma and shrimp handling",
     "keywords": [
@@ -303,7 +306,7 @@ export const recipes: Recipe[] = [
     "slug": "dim-curry-mustard-oil",
     "title": "Bengali Dim Curry with Mustard Oil",
     "summary": "SEO-ready recipe page connecting bengali dim curry with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Everyday curry",
     "cookingUse": "Egg frying and curry base",
     "keywords": [
@@ -325,7 +328,7 @@ export const recipes: Recipe[] = [
     "slug": "mochar-ghonto",
     "title": "Mochar Ghonto with Mustard Oil",
     "summary": "SEO-ready recipe page connecting mochar ghonto with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Vegetarian cooking",
     "cookingUse": "Vegetable base and traditional aroma",
     "keywords": [
@@ -347,7 +350,7 @@ export const recipes: Recipe[] = [
     "slug": "lau-chingri",
     "title": "Lau Chingri with Mustard Oil",
     "summary": "SEO-ready recipe page connecting lau chingri with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Bengali lunch",
     "cookingUse": "Vegetable and prawn base",
     "keywords": [
@@ -369,7 +372,7 @@ export const recipes: Recipe[] = [
     "slug": "chorchori",
     "title": "Mixed Vegetable Chorchori",
     "summary": "SEO-ready recipe page connecting mixed vegetable chorchori with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Vegetarian cooking",
     "cookingUse": "Daily vegetable cooking",
     "keywords": [
@@ -391,7 +394,7 @@ export const recipes: Recipe[] = [
     "slug": "potol-bhaja",
     "title": "Potol Bhaja",
     "summary": "SEO-ready recipe page connecting potol bhaja with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-begun.svg",
+    "image": "/placeholders/recipe-begun.png",
     "category": "Vegetarian side",
     "cookingUse": "Quick frying",
     "keywords": [
@@ -413,7 +416,7 @@ export const recipes: Recipe[] = [
     "slug": "bhindi-fry-mustard-oil",
     "title": "Bhindi Fry with Mustard Oil",
     "summary": "SEO-ready recipe page connecting bhindi fry with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Everyday cooking",
     "cookingUse": "Pan frying",
     "keywords": [
@@ -435,7 +438,7 @@ export const recipes: Recipe[] = [
     "slug": "dal-tempering-mustard-oil",
     "title": "Dal Tempering with Mustard Oil",
     "summary": "SEO-ready recipe page connecting dal tempering with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Daily meal",
     "cookingUse": "Tempering",
     "keywords": [
@@ -457,7 +460,7 @@ export const recipes: Recipe[] = [
     "slug": "fish-fry-marinade",
     "title": "Fish Fry Marinade with Mustard Oil",
     "summary": "SEO-ready recipe page connecting fish fry marinade with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-fish.svg",
+    "image": "/placeholders/recipe-fish.png",
     "category": "Snack",
     "cookingUse": "Marination and frying prep",
     "keywords": [
@@ -479,7 +482,7 @@ export const recipes: Recipe[] = [
     "slug": "kasundi-serving-guide",
     "title": "Kasundi Serving Guide",
     "summary": "SEO-ready recipe page connecting kasundi serving guide with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Condiment",
     "cookingUse": "Mustard condiment pairing",
     "keywords": [
@@ -501,7 +504,7 @@ export const recipes: Recipe[] = [
     "slug": "bengali-pickle-base",
     "title": "Bengali Pickle Base with Mustard Oil",
     "summary": "SEO-ready recipe page connecting bengali pickle base with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-pickle.svg",
+    "image": "/placeholders/recipe-pickle.png",
     "category": "Pickle",
     "cookingUse": "Pickle oil base",
     "keywords": [
@@ -523,7 +526,7 @@ export const recipes: Recipe[] = [
     "slug": "monsoon-khichuri-side",
     "title": "Monsoon Khichuri Side Fry",
     "summary": "SEO-ready recipe page connecting monsoon khichuri side fry with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Seasonal cooking",
     "cookingUse": "Side frying and aroma",
     "keywords": [
@@ -545,7 +548,7 @@ export const recipes: Recipe[] = [
     "slug": "street-style-jhal-snack",
     "title": "Street-Style Jhal Snack Oil Drizzle",
     "summary": "SEO-ready recipe page connecting street-style jhal snack oil drizzle with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Snack",
     "cookingUse": "Raw aroma finish",
     "keywords": [
@@ -567,7 +570,7 @@ export const recipes: Recipe[] = [
     "slug": "winter-vegetable-fry",
     "title": "Winter Vegetable Fry with Mustard Oil",
     "summary": "SEO-ready recipe page connecting winter vegetable fry with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Seasonal cooking",
     "cookingUse": "Seasonal frying",
     "keywords": [
@@ -589,7 +592,7 @@ export const recipes: Recipe[] = [
     "slug": "posto-bora",
     "title": "Posto Bora with Mustard Oil",
     "summary": "SEO-ready recipe page connecting posto bora with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/social-recipe.svg",
+    "image": "/placeholders/social-recipe.png",
     "category": "Snack",
     "cookingUse": "Shallow frying",
     "keywords": [
@@ -611,7 +614,7 @@ export const recipes: Recipe[] = [
     "slug": "parshe-fish-mustard",
     "title": "Parshe Fish with Mustard Oil",
     "summary": "SEO-ready recipe page connecting parshe fish with mustard oil with the role of mustard oil in Bengali cooking.",
-    "image": "/placeholders/recipe-fish.svg",
+    "image": "/placeholders/recipe-fish.png",
     "category": "Fish curry",
     "cookingUse": "Fish preparation",
     "keywords": [

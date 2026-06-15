@@ -5,7 +5,7 @@ import CTA from "../../components/CTA.astro";
 import { districts } from "../../data/districts";
 ---
 <BaseLayout title="Distributor Opportunity" description="Distributor opportunity for Ashok Gopal mustard oil across Kolkata, Howrah, Hooghly, North 24 Parganas, South 24 Parganas, Nadia, Murshidabad, Bardhaman, Birbhum, and North Bengal.">
-  <PageHero eyebrow="Distributor network" title="Build district-wise distribution instead of random enquiries." description="This hub is for firms that can sell into retailers, wholesalers, restaurants, and institutions with regular stock rotation." image="/placeholders/social-distribution.svg" primaryHref="/wholesale/distributor/" primaryLabel="Apply as distributor" secondaryHref="/wholesale/super-stockist/" secondaryLabel="Super stockist" />
+  <PageHero eyebrow="Distributor network" title="Build district-wise distribution instead of random enquiries." description="This hub is for firms that can sell into retailers, wholesalers, restaurants, and institutions with regular stock rotation." image="/placeholders/social-distribution.png" primaryHref="/wholesale/distributor/" primaryLabel="Apply as distributor" secondaryHref="/wholesale/super-stockist/" secondaryLabel="Super stockist" />
   <section class="grid three section">{districts.map((district) => <a class="card text-card" href={`/wholesale/${district.slug}/`}><h3>{district.name}</h3><p>{district.leadAngle}</p></a>)}</section>
   <CTA />
 </BaseLayout>
