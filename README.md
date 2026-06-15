@@ -27,6 +27,7 @@ Main data files:
 - `src/data/contentPages.ts`
 - `src/data/pages.ts`
 - `src/data/site.ts`
+- 
 
 ## Before launch
 
