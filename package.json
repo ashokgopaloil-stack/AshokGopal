@@ -3,15 +3,15 @@
   "version": "0.2.0",
   "private": true,
   "type": "module",
-  "engines": {
-    "node": ">=22.12.0"
-  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "check": "astro check"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
