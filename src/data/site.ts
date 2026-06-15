@@ -5,14 +5,14 @@ export const SITE = {
   url: "https://www.ashokgopaloil.com",
   defaultImage: "/placeholders/social-preview.svg",
   logo: "/logo.svg",
-  phone: "+91-8001003000",
-  whatsapp: "918001003000",
+  phone: "+91-3000",
+  whatsapp: "0000000000",
   email: "sales@ashokgopaloil.com",
   address: {
-    street: "9/3, Graham Road, Kamarhati",
+    street: "AAAAAA BBBBBBB",
     locality: "Kolkata",
     region: "West Bengal",
-    postalCode: "700058",
+    postalCode: "700000",
     country: "IN",
     latitude: "22.6738",
     longitude: "88.3749"
