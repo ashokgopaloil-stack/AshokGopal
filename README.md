@@ -52,19 +52,3 @@ This version includes an expanded SEO and operating-system layer for Ashok Gopal
 - Contact and wholesale forms now include Netlify honeypot and thank-you redirect
 
 Important: replace placeholder business data, photos, FSSAI/compliance details, MRP, carton data and rate-card facts before launch.
-
-## Royal Clean Design Pass
-
-This version replaces the earlier high-noise template with a calmer premium visual system:
-
-- Ivory and parchment page base
-- Deep royal maroon primary tone
-- Muted gold accents for hierarchy
-- Georgia/system-serif display headings for a more traditional, premium feel
-- Cleaner header navigation with fewer top-level links
-- More whitespace around hero, cards, CTA panels and page hubs
-- Softer card shadows and restrained borders
-- New premium SVG placeholders for product, factory, recipe and distribution images
-- Build fixed and verified with `npm run check` and `npm run build`
-
-The site still keeps the large SEO architecture, but the top-level visual language is now simpler and more brand-like. Replace the placeholder SVGs with real photography before public launch.

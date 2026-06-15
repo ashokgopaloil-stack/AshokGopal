@@ -24,16 +24,20 @@ export const SITE = {
   nav: [
     { label: "Products", href: "/products/" },
     { label: "Wholesale", href: "/wholesale/" },
-    { label: "Manufacturing", href: "/manufacturing/" },
-    { label: "Quality", href: "/quality/" },
+    { label: "Buyers", href: "/buyers/" },
+    { label: "Proof", href: "/proof/" },
     { label: "Guide", href: "/mustard-oil/" },
+    { label: "Districts", href: "/districts/" },
+    { label: "Procurement", href: "/procurement/" },
+    { label: "Marketplaces", href: "/marketplaces/" },
+    { label: "Recipes", href: "/heritage-cooking/" },
     { label: "Contact", href: "/contact/" }
   ],
   trustBadges: [
-    "Kacchi ghani mustard oil",
-    "West Bengal trade focus",
-    "Bottle, jar, tin and carton pages",
-    "Proof-library and FSSAI slots ready"
+    "Kacchi ghani positioning",
+    "Bengali kitchen and trade-market focus",
+    "Product, wholesale, district and recipe SEO architecture",
+    "FSSAI, marketplace and proof-library slots ready"
   ]
 } as const;
 

@@ -23,10 +23,5 @@ const { eyebrow, title, description, image, primaryHref, primaryLabel, secondary
       </div>
     )}
   </div>
-  {image && (
-    <div class="hero-visual">
-      <img src={image} alt="Ashok Gopal visual placeholder" loading="eager" />
-      <p class="floating-note">Premium image slot. Replace with real bottle, factory, or trade photo.</p>
-    </div>
-  )}
+  {image && <img src={image} alt="Ashok Gopal visual placeholder" loading="eager" />}
 </section>

@@ -5,7 +5,7 @@ interface FAQ {
   answer: string;
 }
 interface Props {
-  faqs: readonly FAQ[];
+  faqs: FAQ[];
 }
 const { faqs } = Astro.props;
 const data = {
