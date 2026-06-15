@@ -6,17 +6,16 @@ import { districts } from "../../data/districts";
 import { b2bSegments } from "../../data/pages";
 import { whatsappLink } from "../../data/site";
 
-const allPages = [
-  ...districts.map((district) => ({ type: "district", slug: district.slug, data: district })),
-  ...b2bSegments.map((segment) => ({ type: "segment", slug: segment.slug, data: segment }))
-];
-
 export function getStaticPaths() {
+  const allPages = [
+    ...districts.map((district) => ({ type: "district", slug: district.slug, data: district })),
+    ...b2bSegments.map((segment) => ({ type: "segment", slug: segment.slug, data: segment }))
+  ];
   return allPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
 }
 const { page } = Astro.props;
 const isDistrict = page.type === "district";
-const data = page.data;
+const data = page.data as any;
 ---
 <BaseLayout title={isDistrict ? data.headline : data.title} description={isDistrict ? data.summary : data.description}>
   <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Wholesale", href: "/wholesale/" }, { name: isDistrict ? data.name : data.title, href: `/wholesale/${page.slug}/` }]} />
@@ -36,13 +35,13 @@ const data = page.data;
 
   {isDistrict ? (
     <section class="grid three section">
-      <div class="card text-card"><p class="eyebrow">Buyer types</p><ul>{data.buyerTypes.map((item) => <li>{item}</li>)}</ul></div>
-      <div class="card text-card"><p class="eyebrow">Priority markets</p><ul>{data.priorityMarkets.map((item) => <li>{item}</li>)}</ul></div>
+      <div class="card text-card"><p class="eyebrow">Buyer types</p><ul>{data.buyerTypes.map((item: string) => <li>{item}</li>)}</ul></div>
+      <div class="card text-card"><p class="eyebrow">Priority markets</p><ul>{data.priorityMarkets.map((item: string) => <li>{item}</li>)}</ul></div>
       <div class="card text-card"><p class="eyebrow">Sales angle</p><p>{data.leadAngle}</p></div>
     </section>
   ) : (
     <section class="grid three section">
-      {data.bullets.map((bullet) => <div class="card text-card"><p>{bullet}</p></div>)}
+      {data.bullets.map((bullet: string) => <div class="card text-card"><p>{bullet}</p></div>)}
     </section>
   )}
 
