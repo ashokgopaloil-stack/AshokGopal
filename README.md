@@ -2,7 +2,7 @@
 
 SEO-first Astro website for Ashok Gopal mustard oil: product catalog, wholesale acquisition, West Bengal district pages, buyer use cases, recipe content, manufacturing proof, quality proof, and comparison/education hubs.
 
-## Run
+## Hwo to Run
 
 ```bash
 npm install
