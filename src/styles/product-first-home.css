@@ -1,0 +1,92 @@
+/* Product-first home and catalogue layout. */
+:root { --pf-max: 1240px; }
+
+body { background: #fffaf0; }
+main { overflow: visible; }
+
+.site-header {
+  min-height: 64px;
+  padding: .55rem clamp(.85rem, 3vw, 2.25rem);
+  gap: clamp(.75rem, 2vw, 1.5rem);
+  box-shadow: 0 10px 30px rgba(77, 22, 8, .06);
+}
+.brand img { width: 38px; height: 38px; }
+.brand strong { font-size: .98rem; line-height: 1; }
+.brand small { font-size: .72rem; line-height: 1.1; }
+.site-header nav { gap: clamp(.65rem, 1.5vw, 1rem); justify-content: flex-end; font-size: .84rem; white-space: nowrap; }
+.header-cta, .button { min-height: 40px; padding: .68rem 1rem; font-size: .88rem; box-shadow: 0 8px 20px rgba(122, 38, 14, .14); }
+
+.hero, .page-hero, .section, .split-section, .product-detail, .form-shell, .cta-panel, .trust-strip, .catalogue-panel, .home-shopfront, .value-strip {
+  width: min(var(--pf-max), calc(100% - 2rem));
+  margin-inline: auto;
+}
+.hero, .page-hero, .section, .split-section, .product-detail, .form-shell { padding-block: clamp(1.2rem, 3.5vw, 2.8rem); }
+.hero h1, .page-hero h1, .product-detail h1, .home-shopfront h1 {
+  font-size: clamp(2rem, 4.2vw, 3.15rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  margin: 0 0 .75rem;
+}
+.section-heading h2, .split-section h2, .cta-panel h2, .amber-block h2, .catalogue-head h2, .proof-slot-grid > h2, .designer-title {
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: 0 0 .65rem;
+}
+.lead, .designer-lead, .section-tagline { font-size: clamp(.98rem, 1.6vw, 1.1rem); max-width: 760px; }
+.eyebrow { margin-bottom: .45rem; font-size: .68rem; letter-spacing: .14em; }
+
+.page-hero.rich-hero, .page-hero-compact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(110px, 190px);
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.8rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+.page-hero img, .page-hero-thumb img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 20px;
+  padding: .6rem;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 25px rgba(77, 22, 8, .08);
+}
+
+.home-shopfront {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
+  gap: clamp(1rem, 4vw, 2rem);
+  align-items: stretch;
+  padding: clamp(1rem, 3vw, 2rem) 0 .75rem;
+}
+.home-shopfront-copy { display: flex; flex-direction: column; justify-content: center; min-height: 100%; }
+.home-shopfront-copy .lead { margin: 0; color: var(--muted); }
+.home-product-rail { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+.home-product-rail .product-card { height: 100%; }
+.home-product-rail .product-card:nth-child(n+4) { display: none; }
+.home-mini-proof { display: grid; grid-template-columns: repeat(2, 1fr); gap: .65rem; margin-top: 1rem; }
+.home-mini-proof span { border-radius: 16px; border: 1px solid var(--line); background: white; padding: .75rem; color: var(--brand-dark); font-size: .86rem; font-weight: 800; }
+.value-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: .75rem; margin-bottom: 1rem; }
+.value-strip div { border: 1px solid var(--line); border-radius: 18px; background: white; padding: .9rem; box-shadow: 0 10px 24px rgba(77, 22, 8, .06); }
+.value-strip strong { display: block; color: var(--brand-dark); font-size: .96rem; }
+.value-strip span { display: block; color: var(--muted); font-size: .82rem; margin-top: .2rem; line-height: 1.35; }
+
+@media (max-width: 1100px) {
+  .home-shopfront { grid-template-columns: 1fr; }
+  .home-product-rail { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .value-strip { grid-template-columns: repeat(2, 1fr); }
+  .site-header { grid-template-columns: auto 1fr; }
+  .site-header nav { grid-column: 1 / -1; order: 3; justify-content: flex-start; overflow-x: auto; padding-bottom: .1rem; }
+  .header-cta { justify-self: end; }
+}
+@media (max-width: 720px) {
+  .site-header { grid-template-columns: 1fr auto; }
+  .brand small { display: none; }
+  .site-header nav { display: flex; font-size: .8rem; }
+  .home-product-rail, .value-strip, .page-hero.rich-hero, .page-hero-compact { grid-template-columns: 1fr; }
+  .home-shopfront { padding-top: .75rem; }
+  .hero h1, .page-hero h1, .product-detail h1, .home-shopfront h1 { font-size: clamp(1.9rem, 10vw, 2.5rem); }
+}
