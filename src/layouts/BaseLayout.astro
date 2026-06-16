@@ -19,13 +19,11 @@ const {
   title = SITE.name,
   description = "Ashok Gopal kacchi ghani mustard oil for Bengali kitchens, retail counters, restaurants, and wholesale distribution.",
   canonical,
-  image,
   noindex = false
 } = Astro.props;
 
 const pageTitle = title === SITE.name ? `${SITE.name} | Kacchi Ghani Mustard Oil` : `${title} | ${SITE.name}`;
 const canonicalUrl = canonical ? new URL(canonical, SITE.url).toString() : new URL(Astro.url.pathname, SITE.url).toString();
-const imageUrl = new URL(image ?? SITE.defaultImage, SITE.url).toString();
 ---
 <!doctype html>
 <html lang="en-IN">
