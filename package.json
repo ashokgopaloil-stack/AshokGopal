@@ -10,9 +10,7 @@
     "preview": "astro preview",
     "check": "astro check"
   },
-  "engines": {
-    "node": ">=22.12.0"
-  },
+
   "dependencies": {
     "@astrojs/check": "latest",
     "astro": "latest",
