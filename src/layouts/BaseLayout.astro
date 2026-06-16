@@ -27,17 +27,27 @@ const pageTitle = title === SITE.name ? `${SITE.name} | Kacchi Ghani Mustard Oil
 const canonicalUrl = canonical ? new URL(canonical, SITE.url).toString() : new URL(Astro.url.pathname, SITE.url).toString();
 const imageUrl = new URL(image ?? SITE.defaultImage, SITE.url).toString();
 ---
-<html>
+<!doctype html>
+<html lang="en-IN">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <meta name="theme-color" content="#6f230f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <slot name="head" />
   </head>
   <body>
     <Header />
-    <main><slot /></main>
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
