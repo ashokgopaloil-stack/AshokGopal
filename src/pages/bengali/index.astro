@@ -8,6 +8,6 @@ import { bengaliPages } from "../../data/bengaliPages";
 <BaseLayout title="Bengali Mustard Oil Pages" description="Bengali-local sorsher tel pages for recipes, districts, festivals, restaurants, retailers and WhatsApp sales.">
   <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Bengali", href: "/bengali/" }]} />
   <CollectionSchema slot="head" name="Bengali Mustard Oil Pages" description="Sorsher tel, Bengali cooking and regional-local content cluster." path="/bengali/" items={bengaliPages.map((page) => ({ name: page.title, href: `/bengali/${page.slug}/` }))} />
-  <PageHero eyebrow="Bengali local SEO" title="Own the language of Bengali kitchens." description="These pages use local food terms—sorsher tel, jhajh, gondho—and connect them to products, recipes, districts and trade supply." image="/placeholders/social-recipe.png" primaryHref="/heritage-cooking/" primaryLabel="Recipes" secondaryHref="/districts/" secondaryLabel="District pages" />
+  <PageHero eyebrow="Bengali local SEO" title="Own the language of Bengali kitchens." description="These pages use local food terms—sorsher tel, jhajh, gondho—and connect them to products, recipes, districts and trade supply." image="/placeholders/social-recipe.webp" primaryHref="/heritage-cooking/" primaryLabel="Recipes" secondaryHref="/districts/" secondaryLabel="District pages" />
   <section class="section grid three">{bengaliPages.map((page) => <a class="card text-card" href={`/bengali/${page.slug}/`}><h3>{page.title}</h3><p>{page.summary}</p></a>)}</section>
 </BaseLayout>

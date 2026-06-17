@@ -14,7 +14,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "sorsher-tel-for-machher-jhol",
@@ -31,7 +31,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/recipe-fish.png"
+    "image": "/placeholders/recipe-fish.webp"
   },
   {
     "slug": "sorsher-tel-for-shorshe-ilish",
@@ -48,7 +48,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/recipe-fish.png"
+    "image": "/placeholders/recipe-fish.webp"
   },
   {
     "slug": "sorsher-tel-for-aloo-bhaja",
@@ -65,7 +65,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "sorsher-tel-for-begun-bhaja",
@@ -82,7 +82,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "sorsher-tel-for-shukto",
@@ -99,7 +99,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "sorsher-tel-for-kosha-mangsho",
@@ -116,7 +116,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "sorsher-tel-for-posto",
@@ -133,7 +133,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "sorsher-tel-for-achar",
@@ -150,7 +150,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "bengali-kitchen-monthly-oil-planning",
@@ -167,7 +167,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "durga-puja-cooking-supply",
@@ -184,7 +184,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "kali-puja-and-wedding-catering-oil",
@@ -201,7 +201,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "jhalmuri-and-street-food-mustard-oil",
@@ -218,7 +218,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "bengali-restaurant-mustard-oil",
@@ -235,7 +235,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "north-kolkata-kitchen-sorsher-tel",
@@ -252,7 +252,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "howrah-kirana-sorsher-tel",
@@ -269,7 +269,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "hooghly-household-sorsher-tel",
@@ -286,7 +286,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "north-24-parganas-sorsher-tel",
@@ -303,7 +303,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "south-24-parganas-sorsher-tel",
@@ -320,7 +320,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "bengali-mustard-oil-glossary",
@@ -337,7 +337,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "sorsher-tel-recipe-photo-guide",
@@ -354,7 +354,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "bengali-whatsapp-reply-templates",
@@ -371,7 +371,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "bengali-pack-label-copy",
@@ -388,7 +388,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "bengali-festival-retail-display",
@@ -405,7 +405,7 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   },
   {
     "slug": "bengali-home-chef-sample-program",
@@ -422,6 +422,6 @@ export const bengaliPages = [
       "/products/kacchi-ghani-mustard-oil-5l-jar/",
       "/wholesale/"
     ],
-    "image": "/placeholders/social-recipe.png"
+    "image": "/placeholders/social-recipe.webp"
   }
 ] as const;

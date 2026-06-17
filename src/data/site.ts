@@ -3,7 +3,7 @@ export const SITE = {
   legalName: "Ashok Gopal Mustard Oil",
   tagline: "Kacchi ghani mustard oil for Bengali kitchens and wholesale supply.",
   url: "https://www.ashokgopaloil.com",
-  defaultImage: "/placeholders/social-preview.png",
+  defaultImage: "/placeholders/social-preview.webp",
   logo: "/logo.svg",
   phone: "+91-3000",
   whatsapp: "0000000000",

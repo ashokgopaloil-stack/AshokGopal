@@ -27,7 +27,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "mustard-oil-for-cooking-not-medical-advice",
@@ -57,7 +57,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "what-to-check-on-mustard-oil-label",
@@ -87,7 +87,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "packed-vs-loose-mustard-oil-safety",
@@ -117,7 +117,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "how-to-store-mustard-oil-at-home",
@@ -147,7 +147,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "mustard-oil-for-pickles-storage",
@@ -177,7 +177,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "mustard-oil-smoke-point-practical-guide",
@@ -207,7 +207,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "skin-hair-and-massage-claim-policy",
@@ -237,7 +237,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "omega-3-omega-6-and-fat-composition",
@@ -267,7 +267,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "allergy-and-sensitivity-note",
@@ -297,7 +297,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "children-and-family-kitchen-note",
@@ -327,7 +327,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "restaurant-handling-checklist",
@@ -357,7 +357,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "retailer-stock-rotation-checklist",
@@ -387,7 +387,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "distributor-storage-checklist",
@@ -417,7 +417,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "damaged-pack-complaint-flow",
@@ -447,7 +447,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "nutrition-panel-how-to-read",
@@ -477,7 +477,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "fssai-food-safety-connect-note",
@@ -507,7 +507,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "marketplace-claim-safety",
@@ -537,7 +537,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "doctor-and-dietitian-disclaimer",
@@ -567,7 +567,7 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   },
   {
     "slug": "faq-on-mustard-oil-myths",
@@ -597,6 +597,6 @@ export const safetyPages = [
         "answer": "Only after claim review. Marketplace and ad copy should use verified label facts and avoid unsupported health promises."
       }
     ],
-    "image": "/placeholders/social-preview.png"
+    "image": "/placeholders/social-preview.webp"
   }
 ] as const;

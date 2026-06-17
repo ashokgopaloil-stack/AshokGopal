@@ -5,7 +5,7 @@ import CTA from "../../components/CTA.astro";
 import { districts } from "../../data/districts";
 ---
 <BaseLayout title="Where to Buy" description="Where to buy Ashok Gopal mustard oil. Retailer, distributor, and district availability placeholders for West Bengal.">
-  <PageHero eyebrow="Retail availability" title="Where to buy Ashok Gopal mustard oil." description="Add verified shops, distributors, and district availability here once confirmed. Until then, this page routes buyers to WhatsApp and district enquiry pages." image="/placeholders/social-distribution.png" primaryHref="/contact/" primaryLabel="Ask for nearest seller" secondaryHref="/wholesale/" secondaryLabel="Trade enquiry" />
+  <PageHero eyebrow="Retail availability" title="Where to buy Ashok Gopal mustard oil." description="Add verified shops, distributors, and district availability here once confirmed. Until then, this page routes buyers to WhatsApp and district enquiry pages." image="/placeholders/social-distribution.webp" primaryHref="/contact/" primaryLabel="Ask for nearest seller" secondaryHref="/wholesale/" secondaryLabel="Trade enquiry" />
   <section class="grid three section">{districts.map((district) => <a class="card text-card" href={`/wholesale/${district.slug}/`}><h3>{district.name}</h3><p>{district.summary}</p></a>)}</section>
   <CTA title="Have a shop and want to stock Ashok Gopal?" href="/wholesale/" label="Open wholesale enquiry" />
 </BaseLayout>
