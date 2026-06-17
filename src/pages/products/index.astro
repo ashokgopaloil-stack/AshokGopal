@@ -1,23 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PageHero from "../../components/PageHero.astro";
-import ProductCard from "../../components/ProductCard.astro";
+import ProductFilterGrid from "../../components/ProductFilterGrid.astro";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema.astro";
 import { products } from "../../data/products";
 ---
-<BaseLayout title="Mustard Oil Products" description="Ashok Gopal kacchi ghani mustard oil product catalog with bottle, jar, tin, retail carton, household, restaurant, and wholesale pack-size pages.">
+<BaseLayout title="Mustard Oil Products" description="Ashok Gopal kacchi ghani mustard oil catalogue with household bottles, family jars, food-service tins, retail and wholesale pack-size pages.">
   <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }]} />
-  <PageHero eyebrow="Product catalog" title="Mustard oil product pages for every buyer intent." description="Each SKU page is built for a different conversion path: household purchase, retail shelf, restaurant bulk use, institutional procurement, or distributor carton supply." image="/placeholders/hero-product.png" primaryHref="/wholesale/" primaryLabel="Trade enquiry" secondaryHref="/quality/" secondaryLabel="Quality proof" />
 
-  <section class="section">
-    <div class="grid products">
-      {products.map((product) => <ProductCard product={product} />)}
-    </div>
-  </section>
+  <ProductFilterGrid products={products} title="Find the right Ashok Gopal pack." intro="Filter by pack size, buyer type and launch status. Product pages should help a household, kirana shop, restaurant or distributor reach the right enquiry quickly." />
 
-  <section class="section amber-block">
-    <p class="eyebrow">Product manager note</p>
-    <h2>The catalog is intentionally split by SKU and use case.</h2>
-    <p>A 1 litre buyer, a 15 kg tin buyer, and a distributor asking for cartons are not the same lead. Separate pages let search engines and sales conversations match the right landing page to the right person.</p>
+  <section class="section amber-block dense-section">
+    <p class="eyebrow">Catalogue logic</p>
+    <h2>Each pack size should answer a different buying question.</h2>
+    <p>The 1 litre buyer wants daily cooking confidence. The 5 litre jar buyer wants value. The 15 kg tin buyer wants food-service consistency. A distributor wants rotation, carton count and margins. Keep those paths separate instead of forcing everyone through one generic page.</p>
   </section>
 </BaseLayout>

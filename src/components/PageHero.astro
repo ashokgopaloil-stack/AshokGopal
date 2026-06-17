@@ -11,7 +11,7 @@ interface Props {
 }
 const { eyebrow, title, description, image, primaryHref, primaryLabel, secondaryHref, secondaryLabel } = Astro.props;
 ---
-<section class="page-hero rich-hero">
+<section class="page-hero page-hero-compact">
   <div>
     {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     <h1>{title}</h1>
@@ -23,5 +23,5 @@ const { eyebrow, title, description, image, primaryHref, primaryLabel, secondary
       </div>
     )}
   </div>
-  {image && <img src={image} alt="Ashok Gopal visual placeholder" loading="eager" />}
+  {image && <div class="page-hero-thumb"><img src={image} alt="Ashok Gopal product visual" loading="eager" /></div>}
 </section>
