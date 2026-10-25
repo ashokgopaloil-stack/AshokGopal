@@ -3,7 +3,7 @@ export const SITE = {
   legalName: "Ashok Gopal Mustard Oil",
   tagline: "Kacchi ghani mustard oil for Bengali kitchens and wholesale supply.",
   url: "https://www.ashokgopaloil.com",
-  defaultImage: "/placeholders/social-preview.png",
+  defaultImage: "/placeholders/social-preview.webp",
   logo: "/logo.svg",
   phone: "+91-3000",
   whatsapp: "0000000000",
@@ -25,20 +25,16 @@ export const SITE = {
   nav: [
     { label: "Products", href: "/products/" },
     { label: "Wholesale", href: "/wholesale/" },
+    { label: "Quality", href: "/quality/" },
     { label: "Buyers", href: "/buyers/" },
-    { label: "Proof", href: "/proof/" },
-    { label: "Guide", href: "/mustard-oil/" },
-    { label: "Districts", href: "/districts/" },
-    { label: "Procurement", href: "/procurement/" },
-    { label: "Marketplaces", href: "/marketplaces/" },
     { label: "Recipes", href: "/heritage-cooking/" },
     { label: "Contact", href: "/contact/" }
   ],
   trustBadges: [
-    "Kacchi ghani positioning",
-    "Bengali kitchen and trade-market focus",
-    "Product, wholesale, district and recipe SEO architecture",
-    "FSSAI, marketplace and proof-library slots ready"
+    "Quality checked pack positioning",
+    "Lowest possible current trade quote path",
+    "Retail, restaurant and distributor funnels",
+    "FSSAI, label and batch proof slots ready"
   ]
 } as const;
 

@@ -1,0 +1,173 @@
+---
+import ProductCard from "./ProductCard.astro";
+import type { Product } from "../data/products";
+
+interface Props {
+  products: Product[];
+  title?: string;
+  intro?: string;
+  compact?: boolean;
+}
+
+const {
+  products,
+  title = "Choose by pack size, buyer type, and use case.",
+  intro = "Filter the catalogue quickly, then send the exact pack requirement to WhatsApp sales.",
+  compact = false
+} = Astro.props;
+
+const packOptions = [
+  { value: "all", label: "All packs" },
+  { value: "trial", label: "Trial / sample" },
+  { value: "retail", label: "Retail bottles" },
+  { value: "family", label: "Family jars" },
+  { value: "tin", label: "Tin / food-service" },
+  { value: "trade", label: "Bulk / private label" }
+];
+
+const buyerOptions = [
+  { value: "all", label: "All buyers" },
+  { value: "home", label: "Home kitchens" },
+  { value: "retail", label: "Retail / kirana" },
+  { value: "foodservice", label: "Restaurants" },
+  { value: "trade", label: "Distributors" }
+];
+
+const priorityOptions = [
+  { value: "all", label: "All status" },
+  { value: "core", label: "Core SKUs" },
+  { value: "retail", label: "Retail SKUs" },
+  { value: "wholesale", label: "Wholesale SKUs" },
+  { value: "planned", label: "Planned" }
+];
+
+function packGroup(product: Product) {
+  const text = `${product.name} ${product.shortName} ${product.packSize} ${product.summary}`.toLowerCase();
+  if (/100\s*ml|200\s*ml|sample|trial/.test(text)) return "trial";
+  if (/15\s*kg|15kg|tin|food[-\s]?service/.test(text)) return "tin";
+  if (/carton|bulk|private label|trade enquiry|contract/.test(text)) return "trade";
+  if (/2\s*litre|2l|3\s*litre|3l|5\s*litre|5l|jar|family/.test(text)) return "family";
+  return "retail";
+}
+
+function buyerGroup(product: Product) {
+  const text = `${product.idealFor.join(" ")} ${product.buyerIntent.join(" ")} ${product.summary}`.toLowerCase();
+  if (/restaurant|eateries|food service|food-service|canteen|institutional/.test(text)) return "foodservice";
+  if (/distributor|wholesale|trader|bulk|private label|territory/.test(text)) return "trade";
+  if (/retail|kirana|counter|shopkeeper|shelf|grocery/.test(text)) return "retail";
+  if (/home|household|family|kitchen/.test(text)) return "home";
+  return "retail";
+}
+---
+<section class:list={["catalogue-panel", compact && "catalogue-panel--compact"]} data-product-filter-root>
+  <div class="catalogue-head">
+    <div>
+      <p class="eyebrow">Product catalogue</p>
+      <h2>{title}</h2>
+      <p>{intro}</p>
+    </div>
+    <a class="button" href="/wholesale/">Ask for current rate</a>
+  </div>
+
+  <div class="filter-bar" aria-label="Product filters">
+    <label>
+      <span>Search</span>
+      <input type="search" placeholder="1L, 5L, tin, restaurant, kirana" data-filter-search />
+    </label>
+    <label>
+      <span>Pack</span>
+      <select data-filter-pack>
+        {packOptions.map((option) => <option value={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+    <label>
+      <span>Buyer</span>
+      <select data-filter-buyer>
+        {buyerOptions.map((option) => <option value={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+    <label>
+      <span>Status</span>
+      <select data-filter-priority>
+        {priorityOptions.map((option) => <option value={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+    <button class="button secondary" type="button" data-filter-reset>Reset</button>
+  </div>
+
+  <div class="quick-filter-row" aria-label="Quick pack filters">
+    {packOptions.map((option, index) => <button class={index === 0 ? "active" : ""} type="button" data-pack-chip={option.value}>{option.label}</button>)}
+  </div>
+
+  <p class="catalogue-count"><strong data-results-count>{products.length}</strong> packs matching your selection</p>
+
+  <div class="grid products catalogue-grid">
+    {products.map((product) => (
+      <div
+        class="catalogue-item"
+        data-product-card
+        data-name={`${product.name} ${product.shortName} ${product.packSize} ${product.category} ${product.summary} ${product.idealFor.join(" ")}`.toLowerCase()}
+        data-pack={packGroup(product)}
+        data-buyer={buyerGroup(product)}
+        data-priority={product.priority}
+      >
+        <ProductCard product={product} />
+      </div>
+    ))}
+  </div>
+
+  <p class="empty-state" data-empty-state hidden>No matching pack found. Reset filters or WhatsApp us with the required quantity.</p>
+
+  <script is:inline>
+    (() => {
+      const root = document.currentScript.closest("[data-product-filter-root]");
+      if (!root) return;
+
+      const search = root.querySelector("[data-filter-search]");
+      const pack = root.querySelector("[data-filter-pack]");
+      const buyer = root.querySelector("[data-filter-buyer]");
+      const priority = root.querySelector("[data-filter-priority]");
+      const reset = root.querySelector("[data-filter-reset]");
+      const count = root.querySelector("[data-results-count]");
+      const empty = root.querySelector("[data-empty-state]");
+      const cards = Array.from(root.querySelectorAll("[data-product-card]"));
+      const chips = Array.from(root.querySelectorAll("[data-pack-chip]"));
+
+      function applyFilters() {
+        const query = (search?.value || "").trim().toLowerCase();
+        const selectedPack = pack?.value || "all";
+        const selectedBuyer = buyer?.value || "all";
+        const selectedPriority = priority?.value || "all";
+        let visible = 0;
+
+        cards.forEach((card) => {
+          const matchesSearch = !query || card.dataset.name.includes(query);
+          const matchesPack = selectedPack === "all" || card.dataset.pack === selectedPack;
+          const matchesBuyer = selectedBuyer === "all" || card.dataset.buyer === selectedBuyer;
+          const matchesPriority = selectedPriority === "all" || card.dataset.priority === selectedPriority;
+          const show = matchesSearch && matchesPack && matchesBuyer && matchesPriority;
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+
+        if (count) count.textContent = String(visible);
+        if (empty) empty.hidden = visible !== 0;
+        chips.forEach((chip) => chip.classList.toggle("active", chip.dataset.packChip === selectedPack));
+      }
+
+      [search, pack, buyer, priority].forEach((control) => control?.addEventListener("input", applyFilters));
+      chips.forEach((chip) => chip.addEventListener("click", () => {
+        if (pack) pack.value = chip.dataset.packChip || "all";
+        applyFilters();
+      }));
+      reset?.addEventListener("click", () => {
+        if (search) search.value = "";
+        if (pack) pack.value = "all";
+        if (buyer) buyer.value = "all";
+        if (priority) priority.value = "all";
+        applyFilters();
+      });
+      applyFilters();
+    })();
+  </script>
+</section>

@@ -8,7 +8,7 @@ const { page } = Astro.props;
 ---
 <BaseLayout title={page.title} description={page.summary}>
   <BreadcrumbSchema slot="head" crumbs={[{ name: "Home", href: "/" }, { name: "Procurement", href: "/procurement/" }, { name: page.title, href: `/procurement/${page.slug}/` }]} />
-  <section class="page-hero rich-hero"><div><p class="eyebrow">Procurement page</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src="/placeholders/social-packaging.png" alt="Procurement readiness placeholder" /></section>
+  <section class="page-hero rich-hero"><div><p class="eyebrow">Procurement page</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></div><img src="/placeholders/social-packaging.webp" alt="Procurement readiness placeholder" /></section>
   <section class="section grid three">{page.items.map((item) => <div class="card text-card"><h3>{item}</h3><p>Add final operational detail, document, or image proof for this checklist item.</p></div>)}</section>
   <CTA title="Prepare this before scaling sales." text="Procurement buyers move faster when product data, documents, pack photos, and commercial terms are ready." href="/wholesale/" label="Wholesale enquiry" />
 </BaseLayout>

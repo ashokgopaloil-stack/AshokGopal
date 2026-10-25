@@ -6,13 +6,22 @@ interface Props {
 const { product } = Astro.props;
 ---
 <article class="card product-card">
-  <img src={product.image} alt={`${product.name} packaging placeholder`} loading="lazy" />
+  <a class="product-image-link" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
+    <img src={product.image} alt={`${product.name} pack visual`} loading="lazy" />
+  </a>
   <div class="card-body">
-    <p class="eyebrow">{product.packSize}</p>
+    <div class="product-meta">
+      <p class="eyebrow">{product.packSize}</p>
+      <span class="priority-pill">{product.priority}</span>
+    </div>
     <h3><a href={`/products/${product.slug}/`}>{product.shortName}</a></h3>
     <p>{product.summary}</p>
     <div class="tag-row">
       {product.idealFor.slice(0, 3).map((tag) => <span>{tag}</span>)}
+    </div>
+    <div class="card-actions">
+      <a href={`/products/${product.slug}/`}>View details</a>
+      <a href="/wholesale/">Trade enquiry</a>
     </div>
   </div>
 </article>
