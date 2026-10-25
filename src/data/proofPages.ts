@@ -62,7 +62,7 @@ export const proofPages = [
   {
     "slug": "jar-and-tin-packing",
     "title": "Jar and Tin Packing Proof",
-    "summary": "Show 5 L jar, 15 L tin and 15 kg tin packing for wholesale and food-service confidence.",
+    "summary": "Show 5 L jar and 15 kg tin packing for wholesale and food-service confidence.",
     "checklist": [
       "Replace placeholder with real photo or document",
       "Add date, location and context note",
@@ -134,7 +134,7 @@ export const proofPages = [
   {
     "slug": "restaurant-bulk-use-proof",
     "title": "Restaurant Bulk Use Proof",
-    "summary": "Show restaurant/caterer buyer context for 5 L, 15 L or 15 kg packs.",
+    "summary": "Show restaurant/caterer buyer context for 5 L or 15 kg packs.",
     "checklist": [
       "Replace placeholder with real photo or document",
       "Add date, location and context note",

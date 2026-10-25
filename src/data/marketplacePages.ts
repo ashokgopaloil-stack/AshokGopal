@@ -103,7 +103,7 @@ export const marketplacePages = [
     "cta": "Prepare wholesale catalogue",
     "requirements": [
       "Carton quantity and case weight",
-      "5 L, 15 L and 15 kg pack photos",
+      "5 L and 15 kg pack photos",
       "MOQ, billing and delivery rules",
       "Retailer-facing reorder script"
     ],

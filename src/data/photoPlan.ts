@@ -1,12 +1,6 @@
 export const photoShots = [
   {
     "group": "Product pack photos",
-    "shot": "100 ml sample front",
-    "filename": "ashok-gopal-100-ml-sample-front.webp",
-    "priority": "P0"
-  },
-  {
-    "group": "Product pack photos",
     "shot": "200 ml trial pack front",
     "filename": "ashok-gopal-200-ml-trial-pack-front.webp",
     "priority": "P0"
@@ -33,12 +27,6 @@ export const photoShots = [
     "group": "Product pack photos",
     "shot": "5 L jar front",
     "filename": "ashok-gopal-5-l-jar-front.webp",
-    "priority": "P0"
-  },
-  {
-    "group": "Product pack photos",
-    "shot": "15 L tin front",
-    "filename": "ashok-gopal-15-l-tin-front.webp",
     "priority": "P0"
   },
   {

@@ -13,5 +13,5 @@ const { page } = Astro.props;
   <section class="page-hero"><p class="eyebrow">Buyer comparison</p><h1>{page.title}</h1><p class="lead">{page.summary}</p></section>
   <section class="section comparison-grid"><div class="card text-card"><h2>{page.leftLabel}</h2><ul>{page.criteria.map((item) => <li>{item}</li>)}</ul></div><div class="card text-card"><h2>{page.rightLabel}</h2><ul>{page.criteria.map((item) => <li>{item}</li>)}</ul></div></section>
   <section class="section amber-block"><p class="eyebrow">Editorial rule</p><h2>Keep this factual and buyer-focused.</h2><p>Do not use this comparison page to make unsupported health superiority claims. Use it to explain use case, pack clarity, label verification, cooking fit, and trade buyer questions.</p></section>
-  <CTA title="Compare, then choose the right pack." text="Households usually start with 500 ml or 1 litre. Food-service and distributors should discuss 5 litre, 15 litre, or 15 kg formats." href="/products/" label="View products" />
+  <CTA title="Compare, then choose the right pack." text="Households usually start with 500 ml or 1 litre. Food-service and distributors should discuss 5 litre or 15 kg formats." href="/products/" label="View products" />
 </BaseLayout>

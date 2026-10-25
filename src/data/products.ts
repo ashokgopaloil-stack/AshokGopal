@@ -22,45 +22,6 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    "slug": "kacchi-ghani-mustard-oil-100ml-sample",
-    "name": "Kacchi Ghani Mustard Oil - 100 ml Sample Bottle",
-    "shortName": "100 ml Sample",
-    "sku": "AG-KGMO-100ML",
-    "packSize": "100 ml",
-    "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-bottle.png",
-    "summary": "Trial bottle for recipe creators, sampling tables, shopkeeper demos, and first-taste campaigns.",
-    "description": "Trial bottle for recipe creators, sampling tables, shopkeeper demos, and first-taste campaigns. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
-    "idealFor": [
-      "Sampling counters",
-      "Influencer recipe kits",
-      "Retailer trials",
-      "Festival demos"
-    ],
-    "features": [
-      "Clear pack-size positioning",
-      "Photo slots for front, back, cap/seal, and carton",
-      "Wholesale CTA and WhatsApp path",
-      "Schema-ready product data"
-    ],
-    "buyerIntent": [
-      "Compare pack size",
-      "Request price or distributor terms",
-      "Validate local manufacturer trust",
-      "Ask for recurring supply"
-    ],
-    "packagingNotes": [
-      "Replace placeholder image with final pack photo",
-      "Add MRP, batch, FSSAI and barcode panel photo",
-      "Add carton quantity, case weight, and MOQ when confirmed"
-    ],
-    "storage": "Store sealed in a cool, dry place away from direct sunlight. Use clean, dry utensils after opening.",
-    "priceLabel": "MRP to be added",
-    "schemaPrice": "0.00",
-    "availability": "https://schema.org/InStock",
-    "priority": "retail"
-  },
-  {
     "slug": "kacchi-ghani-mustard-oil-200ml-trial-pack",
     "name": "Kacchi Ghani Mustard Oil - 200 ml Trial Pack",
     "shortName": "200 ml Trial Pack",
@@ -219,45 +180,6 @@ export const products: Product[] = [
     "priority": "planned"
   },
   {
-    "slug": "kacchi-ghani-mustard-oil-3l-value-jar",
-    "name": "Kacchi Ghani Mustard Oil - 3 Litre Value Jar",
-    "shortName": "3 Litre Value Jar",
-    "sku": "AG-KGMO-3L",
-    "packSize": "3 Litre",
-    "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-jar.png",
-    "summary": "Value-oriented jar concept for buyers who want more than a bottle without shifting to 5 litre storage.",
-    "description": "Value-oriented jar concept for buyers who want more than a bottle without shifting to 5 litre storage. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
-    "idealFor": [
-      "Family value pack",
-      "Small eateries",
-      "Monthly use",
-      "Retail value shelves"
-    ],
-    "features": [
-      "Clear pack-size positioning",
-      "Photo slots for front, back, cap/seal, and carton",
-      "Wholesale CTA and WhatsApp path",
-      "Schema-ready product data"
-    ],
-    "buyerIntent": [
-      "Compare pack size",
-      "Request price or distributor terms",
-      "Validate local manufacturer trust",
-      "Ask for recurring supply"
-    ],
-    "packagingNotes": [
-      "Replace placeholder image with final pack photo",
-      "Add MRP, batch, FSSAI and barcode panel photo",
-      "Add carton quantity, case weight, and MOQ when confirmed"
-    ],
-    "storage": "Store sealed in a cool, dry place away from direct sunlight. Use clean, dry utensils after opening.",
-    "priceLabel": "Price on request",
-    "schemaPrice": "0.00",
-    "availability": "https://schema.org/PreOrder",
-    "priority": "planned"
-  },
-  {
     "slug": "kacchi-ghani-mustard-oil-5l-jar",
     "name": "Kacchi Ghani Mustard Oil - 5 Litre Jar",
     "shortName": "5 Litre Jar",
@@ -334,45 +256,6 @@ export const products: Product[] = [
     "schemaPrice": "0.00",
     "availability": "https://schema.org/PreOrder",
     "priority": "planned"
-  },
-  {
-    "slug": "kacchi-ghani-mustard-oil-15l-tin",
-    "name": "Kacchi Ghani Mustard Oil - 15 Litre Tin",
-    "shortName": "15 Litre Tin",
-    "sku": "AG-KGMO-15L",
-    "packSize": "15 Litre",
-    "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-tin.png",
-    "summary": "Commercial pack page for buyers who search in litres: restaurants, caterers, and institutional kitchens.",
-    "description": "Commercial pack page for buyers who search in litres: restaurants, caterers, and institutional kitchens. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
-    "idealFor": [
-      "Restaurants",
-      "Caterers",
-      "Institutional kitchens",
-      "Food-service dealers"
-    ],
-    "features": [
-      "Clear pack-size positioning",
-      "Photo slots for front, back, cap/seal, and carton",
-      "Wholesale CTA and WhatsApp path",
-      "Schema-ready product data"
-    ],
-    "buyerIntent": [
-      "Compare pack size",
-      "Request price or distributor terms",
-      "Validate local manufacturer trust",
-      "Ask for recurring supply"
-    ],
-    "packagingNotes": [
-      "Replace placeholder image with final pack photo",
-      "Add MRP, batch, FSSAI and barcode panel photo",
-      "Add carton quantity, case weight, and MOQ when confirmed"
-    ],
-    "storage": "Store sealed in a cool, dry place away from direct sunlight. Use clean, dry utensils after opening.",
-    "priceLabel": "Price on request",
-    "schemaPrice": "0.00",
-    "availability": "https://schema.org/InStock",
-    "priority": "wholesale"
   },
   {
     "slug": "kacchi-ghani-mustard-oil-15kg-tin",

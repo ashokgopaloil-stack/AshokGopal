@@ -1263,14 +1263,14 @@ export const mustardOilGuides: ArticlePage[] = [
   {
     "slug": "mustard-oil-for-restaurants",
     "title": "Mustard Oil for Restaurants",
-    "summary": "Food-service guide linked to 5 litre, 15 litre, and 15 kg pages.",
+    "summary": "Food-service guide linked to 5 litre and 15 kg pages.",
     "cluster": "Trade",
     "intent": "Commercial investigation",
     "image": "/placeholders/social-preview.png",
     "sections": [
       {
         "heading": "What this page should answer",
-        "body": "Food-service guide linked to 5 litre, 15 litre, and 15 kg pages."
+        "body": "Food-service guide linked to 5 litre and 15 kg pages."
       },
       {
         "heading": "Ashok Gopal angle",
@@ -2191,24 +2191,6 @@ export const bulkSupplyPages: BulkPage[] = [
     "title": "10 Litre Mustard Oil Jar Bulk Supply",
     "pack": "10 litre jar",
     "summary": "Intermediate commercial pack for recurring kitchen use.",
-    "specs": [
-      "Final MRP to be added",
-      "Case quantity to be confirmed",
-      "MOQ to be confirmed",
-      "Dispatch terms to be confirmed"
-    ],
-    "buyerFit": [
-      "Retailers",
-      "Distributors",
-      "Restaurants",
-      "Institutional buyers"
-    ]
-  },
-  {
-    "slug": "15-litre-tin-bulk",
-    "title": "15 Litre Mustard Oil Tin Bulk Supply",
-    "pack": "15 litre tin",
-    "summary": "Commercial pack for food-service and institutional enquiries.",
     "specs": [
       "Final MRP to be added",
       "Case quantity to be confirmed",
