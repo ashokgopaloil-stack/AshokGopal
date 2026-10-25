@@ -8,12 +8,18 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "deploy": "wrangler deploy"
   },
-
+  "engines": {
+    "node": ">=22.23.4"
+  },
   "dependencies": {
     "@astrojs/check": "latest",
     "astro": "latest",
     "typescript": "latest"
+  },
+  "devDependencies": {
+    "wrangler": "^4.152.0"
   }
 }
