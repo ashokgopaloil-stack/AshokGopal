@@ -28,7 +28,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-200ML",
     "packSize": "200 ml",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-bottle.png",
+    "image": "/placeholders/product-bottle.webp",
     "summary": "Low-friction discovery pack for households that want to taste aroma and pungency before moving to the 1 litre SKU.",
     "description": "Low-friction discovery pack for households that want to taste aroma and pungency before moving to the 1 litre SKU. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -67,7 +67,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-500ML",
     "packSize": "500 ml",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-bottle.png",
+    "image": "/placeholders/product-bottle.webp",
     "summary": "Compact household bottle for daily Bengali cooking, tempering, pickles, and sharp mustard aroma.",
     "description": "Compact household bottle for daily Bengali cooking, tempering, pickles, and sharp mustard aroma. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "verboseDescription": "<p>Ashok Gopal's 500 ml Kacchi Ghani Mustard Oil is the ultimate compact household kitchen standard, optimized for daily cooking rotation, fresh tempering (tadka), and seasonal home pickles. Cold-pressed using traditional processes, this oil preserves the natural seeds' volatile oils, delivering the signature strong aroma (gondho) and sharp pungency (jhajh) essential for authentic Eastern Indian dishes. The 500 ml volume is preferred by smaller families and retail grocers looking for high inventory turnover rates.</p><h4>Culinary Application</h4><p>Ideal for shallow frying, sauteing vegetables (bhaja), and tempering yellow lentils (dal). The high smoke point of over 250°C ensures that it handles deep heat without burning, while raw drizzling on snacks like jhalmuri adds a powerful sensory lift.</p><h4>B2B Logistics & Case Specs</h4><p>For distributors and wholesale buyers, the 500 ml PET bottles are packed in double-walled master cartons of 24 units. Each carton is designed to withstand transit vibrations across West Bengal highways. Pallet layout supports up to 48 cartons per standard pallet. Batch reports, lab verification certificates, and FSSAI barcode registries are shipped with every wholesale order desk dispatch.</p>",
@@ -107,7 +107,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-1L",
     "packSize": "1 Litre",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-bottle.png",
+    "image": "/placeholders/product-bottle.webp",
     "summary": "Anchor family pack for households and retailers comparing taste, packaging trust, and local manufacturer reliability.",
     "description": "Anchor family pack for households and retailers comparing taste, packaging trust, and local manufacturer reliability. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "verboseDescription": "<p>The 1 Litre bottle is the cornerstone SKU of the Ashok Gopal product line, serving as the benchmark family pack for monthly grocery rotations. Featuring a robust bottle design and a secure yellow cap, it is engineered for daily heavy-use cooking. It offers the perfect volume-to-price ratio for average families cooking traditional dishes like Machher Jhol, Kosha Mangsho, and Begun Bhaja where mustard oil is not just a cooking medium, but a central flavoring agent.</p><h4>Authentic Cold-Press Extraction</h4><p>Our kacchi ghani method involves mechanical crushing of select mustard seeds at temperatures kept below 50°C. This ensures that natural nutrients, antioxidants, and the sharp allyl isothiocyanate compound (which produces the natural jhajh) remain completely uncompromised, unlike refined oils that strip away flavor and nutritional value.</p><h4>Wholesale and Distributor Logistics</h4><p>Standard shipper cartons contain 12 units of 1 Litre bottles. Cartons feature clear batch barcodes, FSSAI registration numbers, and total weight stats for easy inventory check. The Minimum Order Quantity (MOQ) for regional stockist dispatch starts at 100 master cartons, with direct territory exclusivity options available upon contract qualification.</p>",
@@ -147,7 +147,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-2L",
     "packSize": "2 Litre",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/social-distribution.png",
+    "image": "/placeholders/social-distribution.webp",
     "summary": "Intermediate family pack between the 1 litre retail bottle and the 5 litre jar.",
     "description": "Intermediate family pack between the 1 litre retail bottle and the 5 litre jar. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -186,7 +186,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-5L",
     "packSize": "5 Litre",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-jar.png",
+    "image": "/placeholders/product-jar.webp",
     "summary": "High-utility family and small commercial pack for regular mustard-oil users and food-service buyers.",
     "description": "High-utility family and small commercial pack for regular mustard-oil users and food-service buyers. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -225,7 +225,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-10L",
     "packSize": "10 Litre",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-jar.png",
+    "image": "/placeholders/product-jar.webp",
     "summary": "Trade and food-service pack concept for kitchens that reorder before moving to tin format.",
     "description": "Trade and food-service pack concept for kitchens that reorder before moving to tin format. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -264,7 +264,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-15KG",
     "packSize": "15 kg",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-tin.png",
+    "image": "/placeholders/product-tin.webp",
     "summary": "Primary B2B-oriented pack for distributors, restaurants, institutions, and high-volume kitchens.",
     "description": "Primary B2B-oriented pack for distributors, restaurants, institutions, and high-volume kitchens. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -304,7 +304,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-CARTON",
     "packSize": "Mixed retail cartons",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/social-distribution.png",
+    "image": "/placeholders/social-distribution.webp",
     "summary": "Distributor-facing page for cartons, mixed SKUs, and retailer replenishment planning.",
     "description": "Distributor-facing page for cartons, mixed SKUs, and retailer replenishment planning. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -343,7 +343,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-FOODSERVICE",
     "packSize": "Bulk pack mix",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/social-distribution.png",
+    "image": "/placeholders/social-distribution.webp",
     "summary": "Food-service landing SKU for restaurants and caterers that need predictable repeat supply.",
     "description": "Food-service landing SKU for restaurants and caterers that need predictable repeat supply. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -382,7 +382,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-PICKLE",
     "packSize": "Bulk pack mix",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/social-distribution.png",
+    "image": "/placeholders/social-distribution.webp",
     "summary": "Bulk-purchase page for pickle makers and food producers using mustard oil as a flavour and preservation base.",
     "description": "Bulk-purchase page for pickle makers and food producers using mustard oil as a flavour and preservation base. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -421,7 +421,7 @@ export const products: Product[] = [
     "sku": "AG-YMO-PLANNED",
     "packSize": "Planned",
     "category": "Mustard Oil",
-    "image": "/placeholders/product-bottle.png",
+    "image": "/placeholders/product-bottle.webp",
     "summary": "Future product placeholder for a yellow mustard oil line if the brand confirms seed type and packaging.",
     "description": "Future product placeholder for a yellow mustard oil line if the brand confirms seed type and packaging. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -459,7 +459,7 @@ export const products: Product[] = [
     "sku": "AG-BMO-PLANNED",
     "packSize": "Planned",
     "category": "Mustard Oil",
-    "image": "/placeholders/product-bottle.png",
+    "image": "/placeholders/product-bottle.webp",
     "summary": "Future product placeholder for black mustard oil positioning if production and label claims are confirmed.",
     "description": "Future product placeholder for black mustard oil positioning if production and label claims are confirmed. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -497,7 +497,7 @@ export const products: Product[] = [
     "sku": "AG-FMO-PLANNED",
     "packSize": "Planned",
     "category": "Mustard Oil",
-    "image": "/placeholders/product-bottle.png",
+    "image": "/placeholders/product-bottle.webp",
     "summary": "Future filtered mustard oil placeholder for buyers comparing filtered, refined, and kachi ghani terms.",
     "description": "Future filtered mustard oil placeholder for buyers comparing filtered, refined, and kachi ghani terms. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
@@ -535,7 +535,7 @@ export const products: Product[] = [
     "sku": "AG-KGMO-PRIVATE",
     "packSize": "Trade enquiry",
     "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/social-distribution.png",
+    "image": "/placeholders/social-distribution.webp",
     "summary": "Lead-generation page for businesses asking about private label, contract supply, or bulk branded supply.",
     "description": "Lead-generation page for businesses asking about private label, contract supply, or bulk branded supply. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
     "idealFor": [
