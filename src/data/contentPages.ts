@@ -2223,24 +2223,6 @@ export const bulkSupplyPages: BulkPage[] = [
     ]
   },
   {
-    "slug": "20-litre-commercial-jar",
-    "title": "20 Litre Commercial Mustard Oil Jar",
-    "pack": "20 litre jar",
-    "summary": "Commercial jar concept for high-rotation users.",
-    "specs": [
-      "Final MRP to be added",
-      "Case quantity to be confirmed",
-      "MOQ to be confirmed",
-      "Dispatch terms to be confirmed"
-    ],
-    "buyerFit": [
-      "Retailers",
-      "Distributors",
-      "Restaurants",
-      "Institutional buyers"
-    ]
-  },
-  {
     "slug": "mixed-sku-carton",
     "title": "Mixed SKU Mustard Oil Carton Supply",
     "pack": "mixed carton",

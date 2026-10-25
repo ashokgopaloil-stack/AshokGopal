@@ -298,45 +298,6 @@ export const products: Product[] = [
     "priority": "core"
   },
   {
-    "slug": "kacchi-ghani-mustard-oil-20l-commercial-jar",
-    "name": "Kacchi Ghani Mustard Oil - 20 Litre Commercial Jar",
-    "shortName": "20 Litre Commercial Jar",
-    "sku": "AG-KGMO-20L",
-    "packSize": "20 Litre",
-    "category": "Kacchi Ghani Mustard Oil",
-    "image": "/placeholders/product-jar.png",
-    "summary": "Commercial jar concept for high-rotation food-service accounts that prefer handled plastic jars over tins.",
-    "description": "Commercial jar concept for high-rotation food-service accounts that prefer handled plastic jars over tins. This page is written to capture specific buying intent while keeping final commercial facts, MRP, carton count, and pack photographs editable before launch.",
-    "idealFor": [
-      "Commercial kitchens",
-      "Caterers",
-      "Institutional supply",
-      "Dealer enquiries"
-    ],
-    "features": [
-      "Clear pack-size positioning",
-      "Photo slots for front, back, cap/seal, and carton",
-      "Wholesale CTA and WhatsApp path",
-      "Schema-ready product data"
-    ],
-    "buyerIntent": [
-      "Compare pack size",
-      "Request price or distributor terms",
-      "Validate local manufacturer trust",
-      "Ask for recurring supply"
-    ],
-    "packagingNotes": [
-      "Replace placeholder image with final pack photo",
-      "Add MRP, batch, FSSAI and barcode panel photo",
-      "Add carton quantity, case weight, and MOQ when confirmed"
-    ],
-    "storage": "Store sealed in a cool, dry place away from direct sunlight. Use clean, dry utensils after opening.",
-    "priceLabel": "Price on request",
-    "schemaPrice": "0.00",
-    "availability": "https://schema.org/PreOrder",
-    "priority": "planned"
-  },
-  {
     "slug": "kacchi-ghani-mustard-oil-retail-carton",
     "name": "Kacchi Ghani Mustard Oil - Retail Carton Supply",
     "shortName": "Retail Carton Supply",
