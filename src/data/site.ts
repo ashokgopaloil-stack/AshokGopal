@@ -19,6 +19,7 @@ export const SITE = {
   },
   social: {
     instagram: "https://www.instagram.com/ashokgopaloil/",
+    instagramHandle: "@ashokgopaloil",
     facebook: "https://www.facebook.com/ashokgopaloil"
   },
   nav: [

@@ -14,7 +14,7 @@ import { SITE, whatsappLink } from "../../data/site";
       <p>{SITE.address.street}, {SITE.address.locality}, {SITE.address.region} {SITE.address.postalCode}</p>
       <p><strong>Phone:</strong> {SITE.phone}</p>
       <p><strong>Email:</strong> {SITE.email}</p>
-      <div class="social-links"><a href={SITE.social.instagram}>Instagram</a><a href={SITE.social.facebook}>Facebook</a></div>
+      <div class="social-links"><a href={SITE.social.instagram} rel="me noopener" target="_blank">Instagram (@ashokgopaloil)</a><a href={SITE.social.facebook} rel="me noopener" target="_blank">Facebook</a></div>
     </div>
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
       <input type="hidden" name="form-name" value="contact" />

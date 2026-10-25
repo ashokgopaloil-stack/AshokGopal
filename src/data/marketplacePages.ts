@@ -178,6 +178,7 @@ export const marketplacePages = [
     "summary": "Turn product photos, reels and recipe posts into permanent SEO pages with product CTAs.",
     "cta": "Prepare Instagram funnel",
     "requirements": [
+      "Official Instagram handle: @ashokgopaloil (instagram.com/ashokgopaloil)",
       "Reel cover templates",
       "Recipe landing pages",
       "Product hand-shot photos",
